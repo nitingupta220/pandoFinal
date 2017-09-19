@@ -321,21 +321,18 @@ body {
     bottom: 0;
 }
 
-.sidebar:hover {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
+
 
 .sidebar ul {
     list-style: none;
-    margin: 40px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 0
 }
 
 .sidebar ul li {
     display: block;
     width: 125px;
-    height: 85px;
+    height: 78px;
 }
 
 .sidebar ul li a {
@@ -392,6 +389,7 @@ body {
     float: left;
 }
 
+/*
 .sidebar ul li a.logorg:hover,
 .sidebar ul li a.consignee:hover,
 .sidebar ul li a.vendors:hover,
@@ -411,6 +409,14 @@ body {
     filter: brightness(60%) sepia(1);
     color: #0c2a4e;
     text-decoration: none
+}
+*/
+
+.sidebar ul li a {
+    text-decoration: none;
+}
+.sidebar ul li:active {
+    background-color: #f5f5f5;
 }
 
 .sidebar ul li a p {
@@ -693,6 +699,7 @@ a.modal_link {
 @media screen and (max-width:980px) {
     .navbar-header {
         width: 100%;
+        margin-left: 30px;
     }
     .navbar-toggle {
         margin-top: 10px;
@@ -819,11 +826,13 @@ a.modal_link {
     width: 100%;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    transition: box-shadow .4s ease-in-out;
 }
 
 #card .header {
     background-color: #bacddb;
     padding-top: 10px;
+    padding: 5px;
 }
 
 #card .body {
@@ -952,3 +961,8 @@ a.modal_link {
 
 
 */
+
+
+#card:hover {
+     box-shadow: 0 19px 43px rgba(0, 0, 0, 0.10), 0 0 14px rgba(0, 0, 0, 0.10);
+}
