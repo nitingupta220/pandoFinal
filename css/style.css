@@ -389,7 +389,6 @@ body {
     float: left;
 }
 
-/*
 .sidebar ul li a.logorg:hover,
 .sidebar ul li a.consignee:hover,
 .sidebar ul li a.vendors:hover,
@@ -406,19 +405,15 @@ body {
 .sidebar ul li a.bu_cc.active,
 .sidebar ul li a.reports.active,
 .sidebar ul li a.users.active {
-    filter: brightness(60%) sepia(1);
-    color: #0c2a4e;
-    text-decoration: none
-}
-*/
-
-.sidebar ul li a {
+    background-color: #f5f5f5;
+    border-left: 4px solid #42b02b;
     text-decoration: none;
 }
-.sidebar ul li:active {
-    background-color: #f5f5f5;
-}
 
+.sidebar ul li a:hover {
+    text-decoration: none;
+    
+}
 .sidebar ul li a p {
     padding-top: 30px
 }
