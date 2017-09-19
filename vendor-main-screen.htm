@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vendor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vendor</title>
+</head>
+
+<body ng-controller="vendor_data">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle text-right" id="menu_icon"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <button id="close_toggle" type="button" class="navbar-toggle close_btn"> </button>
+                <a class="navbar-brand" href="index.htm"><img src="images/logo-white.png"></a>
+            </div>
+            <div class="pull-right hidden-xs user"> <span><img src="/images/bitmap.png" alt=""></span>
+                <h5>Super Admin</h5>
+                <h5>Mr. Nitin JayaKrishnan</h5>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="padding-left: 0px;">
+        <div id="myNavbar">
+            <div class="col-sm-2 col-md-2 col-lg-1 col1">
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="#" class="logorg">
+                                <p>Logorgs</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="consignee">
+                                <p>Consignees</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="vendors">
+                                <p>Vendors</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="rate_matrix active">
+                                <p>Rate Matrix</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="master_material">
+                                <p>Master Material</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bu_cc">
+                                <p>GLCC</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="reports">
+                                <p>Reports</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="users">
+                                <p>Users</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-11 col2">
+            <div class="text-container">
+                <div class="search_header">
+                    <div class="col-sm-12 col-md-3">
+                        <form id="search">
+                            <img src="images/search.png">
+                            <input type="text" name="search" placeholder="Search here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here'">
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-sm-12 col-md-2 text-right">
+                        <select class="form-control searchform">
+     <option value="">Select City</option>
+    </select>
+                    </div>
+                    <div class="col-sm-12 col-md-3 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#add_rate_matrix">Add new Vendor</a>
+                        <div class="modal fade" id="add_rate_matrix" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <header>
+                                        <h1>Add Bulk Rate Matrix</h1>
+                                    </header>
+                                    <div class="modal-body">
+                                        <div class="col-sm-6"><button type="button" class="btnclose">Download Sample</button></div>
+                                        <div class="col-sm-6 text-right"><button type="button" class="btn">Bulk Upload</button></div>
+                                        <div class="xls">Excel.xlsx</div>
+                                        <div class="col-sm-12 text-center"><input type="submit" class="btn btn-default" value="Add"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        <div class="container" id="card" ng-repeat="element in mydata">
+
+                            <div class="row header">
+                                <div class="col-md-4 col-xs-6" ng-cloak>
+                                    {{element.company_name}}
+                                </div>
+                                <div class="col-md-3 hidden-xs" ng-cloak></div>
+                                <div class="col-md-3 col-xs-6" ng-cloak>Phone Number : {{element.office_phone}}</div>
+                                <div class="col-md-2 col-xs-6" ng-cloak>SAPID : {{element.ref_id}}</div>
+
+                            </div>
+                            <div class="row body">
+                                <div class="col-md-4 col-xs-12">
+                                    <span>Street</span>
+                                    <p ng-cloak data-editable>
+                                        {{element.search_field}}
+                                    </p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>City</span>
+                                    <p ng-cloak>{{element.city}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>State</span>
+                                    <p ng-cloak>{{element.state}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Pincode</span>
+                                    <p ng-cloak>{{element.zipcode}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Country</span>
+                                    <p ng-cloak>India</p>
+                                </div>
+                                <div class="col-md-2 col-xs-6">
+                                    <span>Region</span>
+                                    <p ng-cloak>North</p>
+                                </div>
+                                <div class="col-md-2 text-center anchor">
+                                    <a href="#">Delete</a>
+                                    <br>
+                                    <a href="#" data-toggle="collapse" data-target="#gate_open">More Details</a>
+                                </div>
+
+                            </div>
+
+                            <div class="container collapse" id="gate_open" aria-expanded="true">
+                                <div class="row">
+                                    <div class="col-md-2 col-xs-6">
+                                        <span>Manager Name</span>
+                                        <p ng-cloak>Abhijeet Manohar</p>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Email Id</span>
+                                        <p ng-cloak>abhi@philips.com</p>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Phone Number</span>
+                                        <p ng-cloak>987654321</p>
+                                    </div>
+                                </div>
+                                <div class="container" id="vendor" ng-repeat="gitem in element.sla_route">
+                                    <div class="row">
+                                        <div class="col-md-12 header">
+                                            <span>Ghaziabad - Haryana</span>
+                                        </div>
+                                        <div class="col-md-12 body">
+                                            <div class="col-md-4">
+                                                <span>Vehicle Name</span>
+                                                <p>{{gitem.vehicle_name}}</p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>Base Freight</span>
+                                                <p>{{gitem.freight_charges}}</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>Status</span>
+                                                <p>{{gitem.vendor_status}}</p>
+                                            </div>
+                                            <div class="col-md-3 text-right sla">
+                                                <a href="#" class="btn" style="color: white;">SLA Settings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#menu_icon").click(function() {
+            $("#myNavbar").animate({
+                left: "0"
+            }, 1000);
+            $(".sidebar").css("right", "0px");
+            $("#menu_icon").hide();
+            $("#close_toggle").show();
+        });
+        $("#close_toggle").click(function() {
+            $("#myNavbar").animate({
+                left: "-298px"
+            }, 1000);
+            $(".navbar-toggle").css("right", "0px");
+            $("#close_toggle").hide();
+            $("#menu_icon").show();
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

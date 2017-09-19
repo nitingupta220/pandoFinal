@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/4bd930b540.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<title>Bulk Orders Main Screen</title>
+</head>
+
+<body>
+<nav class="navbar">
+ <div class="container-fluid">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle text-right" id="menu_icon"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+   <button id="close_toggle" type="button" class="navbar-toggle close_btn"> 
+    </button>
+   <a class="navbar-brand" href="index.htm"><img src="images/logo-white.png"></a> </div>
+  <div class="pull-right hidden-xs user"> <span><i class="fa fa-user-circle fa-4x"></i></span>
+   <h5>Super Admin</h5>
+   <h5>Mr. Nitin JayaKrishnan</h5>
+  </div>
+ </div>
+</nav>
+<div class="container-fluid">
+<div id="myNavbar">
+<div class="col-sm-2 col-md-2 col-lg-1 col1">
+ <div class="sidebar" >
+  <ul>
+   <li><a href="#" class="logorg">
+    <p>Logorgs</p>
+    </a></li>
+   <li><a href="#" class="consignee">
+    <p>Consignees</p>
+    </a></li>
+   <li><a href="#" class="vendors">
+    <p>Vendors</p>
+    </a></li>
+   <li><a href="#" class="rate_matrix">
+    <p>Rate Matrix</p>
+    </a></li>
+   <li><a href="#" class="master_material">
+    <p>Master Material</p>
+    </a></li>
+   <li><a href="#" class="bu_cc">
+    <p>GLCC</p>
+    </a></li>
+   <li><a href="#" class="reports">
+    <p>Reports</p>
+    </a></li>
+   <li><a href="#" class="users">
+    <p>Users</p>
+    </a></li>
+  </ul>
+ </div></div></div>
+ <div class="col-sm-10 col-md-10 col-lg-11 col2">
+ <div class="text-container">
+  <div class="search_header">
+   <div class="col-xs-12 col-sm-4 col-md-7">
+    <form>
+     <img src="images/search.png">
+     <input type="text" name="search" placeholder="Search here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here'">
+    </form>
+   </div>
+   <div class="col-xs-6 col-sm-3 col-md-2 text-right">
+    <select class="form-control">
+     <option value="">Select Vendor</option>
+    </select>
+   </div>
+   <div class="col-xs-6 col-sm-5 col-md-3 text-right"><a href="#" class="btn">Add Bulk Orders</a></div>
+  </div>
+  <div class="content">
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+   <table width="100%" class="details">
+    <tr>
+     <th>Vendor ID : SAP2</th>
+     <th align="right"><div class="col-sm-4">PTL/FTL : SAP31</div><div class="col-sm-4">Loading Gate : G3</div>
+      <div class="col-sm-4">Truck Type : 40 FT Trailer</div></th>
+    </tr>
+    <tr>
+     <td>Consignee 1 : SAP33</td>
+     <td><table width="100%"><tr><td>Consignee 2 : SAP33</td><td>Consignee 2 : SAP33</td><td>Consignee 4 : SAP33</td><td>Consignee 5 : SAP33</td></tr>
+     </table></td>
+    </tr>
+   </table>
+  </div>
+ </div>
+</div></div>
+<script>$("#menu_icon").click(function(){
+			$("#myNavbar").animate({
+				left: "0"
+			}, 1000);
+			$(".col1").css("right","0px");
+			$("#menu_icon").hide();
+			$("#close_toggle").show();
+		});
+		$("#close_toggle").click(function(){
+			$("#myNavbar").animate({
+				left: "-200px"
+			}, 1000);
+			$(".navbar-toggle").css("right","0px");
+			$("#close_toggle").hide();
+			$("#menu_icon").show();
+		});</script>
+</body>
+</html>
