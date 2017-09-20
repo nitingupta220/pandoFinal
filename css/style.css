@@ -116,11 +116,13 @@ body {
     text-align: center;
     color: #8b8b8b;
 }
+
 .service img {
     width: 50px;
     height: 50px;
     color: #42b02b;
 }
+
 .main-container {
     top: 90px;
     position: relative
@@ -321,8 +323,6 @@ body {
     bottom: 0;
 }
 
-
-
 .sidebar ul {
     list-style: none;
     margin: 5px 0 0 0;
@@ -332,7 +332,8 @@ body {
 .sidebar ul li {
     display: block;
     width: 125px;
-    height: 78px;
+    height: 80px;
+    padding-top: 10px;
 }
 
 .sidebar ul li a {
@@ -389,6 +390,8 @@ body {
     float: left;
 }
 
+
+/*
 .sidebar ul li a.logorg:hover,
 .sidebar ul li a.consignee:hover,
 .sidebar ul li a.vendors:hover,
@@ -409,11 +412,24 @@ body {
     border-left: 4px solid #42b02b;
     text-decoration: none;
 }
+*/
+
+.sidebar ul li a:hover {
+    background-color: #f5f5f5;
+    text-decoration: none;
+}
+
+.sidebar ul li a.active {
+    background-color: #f5f5f5;
+    border-left: 4px solid #42b02b;
+    text-decoration: none;
+    padding-top: 10px;
+}
 
 .sidebar ul li a:hover {
     text-decoration: none;
-    
 }
+
 .sidebar ul li a p {
     padding-top: 30px
 }
@@ -431,6 +447,10 @@ body {
     padding: 15px 20px;
     height: 75vh;
     overflow: auto;
+}
+
+.hidden-xs {
+    text-align: right;
 }
 
 a.edit {
@@ -833,6 +853,7 @@ a.modal_link {
 #card .body {
     padding-top: 10px;
 }
+
 #card .body .col-sm-1 {
     padding-top: 10px;
 }
@@ -957,7 +978,6 @@ a.modal_link {
 
 */
 
-
 #card:hover {
-     box-shadow: 0 19px 43px rgba(0, 0, 0, 0.10), 0 0 14px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 19px 43px rgba(0, 0, 0, 0.10), 0 0 14px rgba(0, 0, 0, 0.10);
 }
