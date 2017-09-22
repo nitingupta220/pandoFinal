@@ -121,23 +121,29 @@
 
 //code for edit the details
 
+//$(document).ready(function () {
+//    'use strict';
+//    $('body').on('click', '[data-editable]', function () {
+//        var $el = $(this);
+//
+//        var $input = $('<input/>').val($el.text());
+//        $el.replaceWith($input);
+//
+//        var save = function () {
+//
+//            var $p = $('<p data-editable />').text($input.val());
+//            $input.replaceWith($p);
+//        };
+//
+//
+//        $input.one('blur', save).focus();
+//
+//    });
+//
+//});
+
 $(document).ready(function () {
-    'use strict';
-    $('body').on('click', '[data-editable]', function () {
-        var $el = $(this);
-
-        var $input = $('<input/>').val($el.text());
-        $el.replaceWith($input);
-
-        var save = function () {
-
-            var $p = $('<p data-editable />').text($input.val());
-            $input.replaceWith($p);
-        };
-
-
-        $input.one('blur', save).focus();
-
-    });
-
-});
+            $('.sidebar ul li').on('click', function() {
+                $('li').addClass('.sidebar .active');
+            })
+        })

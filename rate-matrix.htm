@@ -16,6 +16,38 @@
     <script src="https://use.fontawesome.com/4bd930b540.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Rate Matrix</title>
+    <style>
+        .form {
+            height: 30px;
+            border-radius: 2px;
+            border: solid 1px #002e4e;
+            background: white;
+            margin-right: 10px;
+            width: 130px;
+            display: none;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 15px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background-color: white;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background-color: #fdfdfd;
+        }
+        
+         ::-webkit-scrollbar-button {
+            background-color: white;
+        }
+        
+         ::-webkit-scrollbar-corner {
+            background-color: white;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -32,48 +64,50 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid" style="padding-left: 0;">
+    <div class="container-fluid" style="padding-left: 0;padding-right: 0;">
         <div id="myNavbar">
             <div class="col-sm-2 col-md-2 col-lg-1 col1">
                 <div class="sidebar">
-                    <ul>
+                    <ul class="text-center">
                         <li>
-                            <a href="#" class="logorg">
+                            <a href="logorg-main-screen.htm" class="logorg active">
+                                <img src="images/Logorg.svg" alt="">
                                 <p>Logorgs</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="consignee">
+                            <a href="consignee-main-screen.htm" class="consignee">
+                                <img src="images/Consignee 1.svg" alt="">
                                 <p>Consignees</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="vendors">
+                            <a href="vendor-main-screen.htm" class="vendors">
+                                <img src="images/Vendor.svg" alt="">
                                 <p>Vendors</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="rate_matrix active">
+                            <a href="rate-matrix.htm" class="rate_matrix">
+                                <img src="images/Rate Metrix.svg" alt="">
                                 <p>Rate Matrix</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="master_material">
+                            <a href="master-material.htm" class="master_material">
+                                <img src="images/Material master.svg" alt="">
                                 <p>Master Material</p>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="bu_cc">
-                                <p>GLCC</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="reports">
-                                <p>Reports</p>
+                                <img src="images/BU CC.svg" alt="">
+                                <p>BU and CC</p>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="users">
+                                <img src="images/Users.svg" alt="">
                                 <p>Users</p>
                             </a>
                         </li>
@@ -83,184 +117,172 @@
         </div>
         <div class="col-sm-10 col-md-10 col-lg-11 col2">
             <div class="text-container">
-                <div class="search_header">
-                    <div class="col-sm-2 col-md-4">
+                <div class="search_header" id="rate">
+                    <div class="col-sm-2 col-md-3" style="padding-left: 0;">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="pill" href="#home" class="change1">Detention Metrics</a></li>
+                            <li><a data-toggle="pill" href="#menu1" class="change">Rate Metrics </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-md-5 ">
                         <form id="search">
                             <img src="images/search.png">
                             <input type="text" name="search" placeholder="Search here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here'">
                         </form>
                     </div>
-                    <div class="col-sm-3 col-md-3 text-right">
-                        <select class="form-control">
-     <option value="">Select Destination</option>
-    </select>
+
+                    <div class="col-sm-4 col-md-4 text-right">
+                        <select class="form">
+                                <option>Select Vendor</option>
+                        </select>
+                        <a href="#" class="btn detention">Add Detention Matrix</a>
+                        <a href="#" class="btn contracts" style="display: none;">Add Rate Matrix</a>
                     </div>
-                    <div class="col-sm-3 col-md-2 text-right">
-                        <select class="form-control">
-     <option value="">Select City</option>
-    </select>
-                    </div>
-                    <div class="col-sm-4 col-md-3 text-right"><a href="#" class="btn">Add New Rate Matrix</a></div>
                 </div>
-                <div class="content">
-                    <table width="100%" class="listing">
-                        <tr>
-                            <th>Rate Matrix ID</th>
-                            <th>RateMatrix_SourceCityCode</th>
-                            <th>SourceCityCode_Desc</th>
-                            <th>RateMatrix_DestinationCityCode</th>
-                            <th>DestinationCityCode_Desc</th>
-                            <th>RateMatrix_VehicleTypeID</th>
-                            <th>VehicleType_Desc</th>
-                            <th>RateMatrix_Distance</th>
-                            <th>RateMatrix_ForwardingAgentID</th>
-                            <th>RateMatrix_ForwardingAgentName</th>
-                            <th>RateMatrix_PreferenceNo</th>
-                            <th>RateMatrix_TransitDays</th>
-                            <th>RateMatrix_Rate</th>
-                            <th>RateMatrix_UOM_Flag</th>
-                            <th>RateMatrix_ValidFrom</th>
-                            <th>RateMatrix_ValidTo</th>
-                            <th>RateMatrix_MinimumRate</th>
-                            <th>RateMatrix_MinimumRate_MultiplyingFactor</th>
-                            <th>RateMatrix_MinimumRate_UOM</th>
-                            <th>RateMatrix_DelayDetentionColumn1D</th>
-                            <th>RateMatrix_DelayDetentionColumn2D</th>
-                            <th>RateMatrix_DelayDetentionColumn3D</th>
-                            <th>RateMatrix_DelayDetentionColumn4D</th>
-                            <th>RateMatrix_DelayDetentionColumn5D</th>
-                            <th>RateMatrix_DelayDetentionColumn>5D</th>
-                            <th>RateMatrix_DetentionTime_Loading</th>
-                            <th>RateMatrix_DelayTransit_Column1D</th>
-                            <th>RateMatrix_DelayTransit_Column2D</th>
-                            <th>RateMatrix_DelayTransit_Column3D</th>
-                            <th>RateMatrix_DelayTransit_Column4D</th>
-                            <th>RateMatrix_DelayTransit_Column5D</th>
-                            <th>RateMatrix_DelayTransit_Column>5D</th>
-                            <th>RateMatrix_DelayDetention_Unloading_Time</th>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Gurgaon</td>
-                            <td>Chennai</td>
-                            <td>34FT MXL HQ<br> Container/2584
-                                <br> CFT/14000 KG</td>
-                            <td>7</td>
-                            <td>76607</td>
-                            <td>TripRate</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </table>
+                <div class="tab-content" id="detention">
+                    <div id="home" class="tab-pane fade in active">
+                        <table width="99%" class="table text-center">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>ID</th>
+                                    <th>Vehicle type ID</th>
+                                    <th>FLag</th>
+                                    <th>Days</th>
+                                    <th>Amount</th>
+                                    <th>Primary</th>
+                                    <th>NC2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>123</td>
+                                    <td>Delay</td>
+                                    <td>2</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>123</td>
+                                    <td>Delay</td>
+                                    <td>2</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>123</td>
+                                    <td>Delay</td>
+                                    <td>2</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+                                    <td>76607</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="menu1" class="tab-pane fade" style="overflow-x: scroll;">
+                        <table width="99%" class="table text-center">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>ID</th>
+                                    <th>Source City Code</th>
+                                    <th>Source City Code Dese</th>
+                                    <th>Destination City Code</th>
+                                    <th>Destination City Code_Desc</th>
+                                    <th>VehicleTypeID</th>
+                                    <th>VehicleType_Desc</th>
+                                    <th>RateMatrix_Distance</th>
+                                    <th>ForwardingAgentID</th>
+                                    <th>ForwardingAgentName</th>
+                                    <th>PreferenceNo</th>
+                                    <th>TransitDays</th>
+                                    <th>RateMatrix_Rate</th>
+                                    <th>UOM_Flag</th>
+                                    <th>ValidForm</th>
+                                    <th>ValidTo</th>
+                                    <th>MinimumRate</th>
+                                    <th>MinimumRate_MultiplyingFactor</th>
+                                    <th>MinimumRate_UOM</th>
+                                    <th>DelayDetentionColumn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>151167</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>32</td>
+                                    <td>Air-Courier</td>
+                                    <td>0</td>
+                                    <td>150</td>
+                                    <td>Om Logistics Limited</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>46</td>
+                                    <td>KG</td>
+                                    <td>01/01/2016</td>
+                                    <td>01/01/2016</td>
+                                    <td>920</td>
+                                    <td>5</td>
+                                    <td>CFT to KG Ratio</td>
+                                    <td>SL</td>
+
+                                </tr>
+                                <tr>
+                                    <td>151167</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>32</td>
+                                    <td>Air-Courier</td>
+                                    <td>0</td>
+                                    <td>150</td>
+                                    <td>Om Logistics Limited</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>46</td>
+                                    <td>KG</td>
+                                    <td>01/01/2016</td>
+                                    <td>01/01/2016</td>
+                                    <td>920</td>
+                                    <td>5</td>
+                                    <td>CFT to KG Ratio</td>
+                                    <td>SL</td>
+                                </tr>
+                                <tr>
+                                    <td>151167</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>N</td>
+                                    <td>Region-North</td>
+                                    <td>32</td>
+                                    <td>Air-Courier</td>
+                                    <td>0</td>
+                                    <td>150</td>
+                                    <td>Om Logistics Limited</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>46</td>
+                                    <td>KG</td>
+                                    <td>01/01/2016</td>
+                                    <td>01/01/2016</td>
+                                    <td>920</td>
+                                    <td>5</td>
+                                    <td>CFT to KG Ratio</td>
+                                    <td>SL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -282,6 +304,18 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
+        $(document).ready(function() {
+            $('.change').on('click', function() {
+                $('.detention').hide();
+                $('.contracts').show();
+                $('.form').show();
+            });
+            $('.change1').on('click', function() {
+                $('.detention').show();
+                $('.contracts').hide();
+                $('.form').hide();
+            })
+        })
 
     </script>
 </body>

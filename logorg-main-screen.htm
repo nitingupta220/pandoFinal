@@ -22,7 +22,7 @@
     <title>LogOrg Main Screen</title>
 </head>
 
-<body ng-controller="logorg_data">
+<body ng-controller="logorg_data" style="overflow-y: hidden;">
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -45,44 +45,46 @@
         <div id="myNavbar">
             <div class="col-sm-2 col-md-2 col-lg-1 col1">
                 <div class="sidebar">
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="logorg-main-screen.htm" class="logorg active">
+                               <img src="images/Logorg.svg" alt="">
                                 <p>Logorgs</p>
                             </a>
                         </li>
                         <li>
                             <a href="consignee-main-screen.htm" class="consignee">
+                               <img src="images/Consignee 1.svg" alt="">
                                 <p>Consignees</p>
                             </a>
                         </li>
                         <li>
                             <a href="vendor-main-screen.htm" class="vendors">
+                               <img src="images/Vendor.svg" alt="">
                                 <p>Vendors</p>
                             </a>
                         </li>
                         <li>
                             <a href="rate-matrix.htm" class="rate_matrix">
+                               <img src="images/Rate Metrix.svg" alt="">
                                 <p>Rate Matrix</p>
                             </a>
                         </li>
                         <li>
                             <a href="master-material.htm" class="master_material">
+                               <img src="images/Material master.svg" alt="">
                                 <p>Master Material</p>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="bu_cc">
-                                <p>GLCC</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="reports">
-                                <p>Reports</p>
+                               <img src="images/BU CC.svg" alt="">
+                                <p>BU and CC</p>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="users">
+                               <img src="images/Users.svg" alt="">
                                 <p>Users</p>
                             </a>
                         </li>
@@ -176,130 +178,265 @@
 
                     <div class="container">
                         <div class="container" id="card" ng-repeat="element in mydata | filter:test">
-                 
-                                <div class="row header" style="padding: 0;padding-top: 10px;">
-                                    <div class="col-md-5 col-xs-6" ng-cloak>
-                                        {{element.company_name}}
-                                    </div>
-                                    <div class="col-md-1 hidden-xs"></div>
-                                    <div class="col-md-3 col-xs-6" ng-cloak>Phone Number : {{element.office_phone}}</div>
-                                    <div class="col-md-2 col-xs-6" ng-cloak>SAPID : {{element.ref_id}}</div>
-                                    <div class="col-md-1 hidden-xs">
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle open_menu" data-toggle="dropdown"></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Edit</a></li>
-                                                <li><a href="#">Delete</a></li>
-                                                <li><a href="#">Add new Gate</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
+                            <div class="row header" style="padding: 0;padding-top: 10px;">
+                                <div class="col-md-5 col-xs-6" ng-cloak>
+                                    {{element.company_name}}
                                 </div>
-                                <div class="row body">
-                                    <div class="col-md-4 col-xs-12">
-                                        <span>Street</span>
-                                        <p ng-cloak data-editable>
-                                            {{element.address}}<br> {{element.street}}
-                                        </p>
+                                <div class="col-md-1 hidden-xs"></div>
+                                <div class="col-md-3 col-xs-6" ng-cloak>Phone Number : {{element.office_phone}}</div>
+                                <div class="col-md-2 col-xs-6" ng-cloak>SAPID : {{element.ref_id}}</div>
+                                <div class="col-md-1 hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle open_menu" data-toggle="dropdown"></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Delete</a></li>
+                                            <li><a href="#" data-toggle="modal" data-target="#gateModal">Add new Gate</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="col-md-1 col-xs-6">
-                                        <span>City</span>
-                                        <p ng-cloak> {{element.city}}</p>
+                                </div>
+                                <div class="modal fade" id="gateModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title text-center">GATE DETAILS</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Gate Manager:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p>Mr. Gurgaon Gate Manager</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Gate Name:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>SAP ID:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Change the Gate Manager:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control">
+                                                            <option>Select Manager</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>SAP ID:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <textarea class="form-control" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Country:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control">
+                                                            <option>Select Country</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>State:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control">
+                                                            <option>Select State</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>City:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control">
+                                                            <option>Select City</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Region:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control">
+                                                            <option>Select Region</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Pincode:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Delivery Type:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="radio">
+                                                            <label><input type="radio" name="optradio">Philips Site</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label><input type="radio" name="optradio">Customer Site</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label><input type="radio" name="optradio">Comaker Site</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p> Status:</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">Inactive</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Update</button>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="col-md-1 col-xs-6">
-                                        <span>State</span>
-                                        <p ng-cloak>{{element.state}}</p>
-                                    </div>
-                                    <div class="col-md-1 col-xs-6">
-                                        <span>Pincode</span>
-                                        <p ng-cloak>{{element.zipcode}}</p>
-                                    </div>
-                                    <div class="col-md-1 col-xs-6">
-                                        <span>Country</span>
-                                        <p ng-cloak>{{element.country}}</p>
-                                    </div>
-                                    <div class="col-md-1 col-xs-6">
-                                        <span>Region</span>
-                                        <p ng-cloak>{{element.region}}</p>
-                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row body">
+                                <div class="col-md-4 col-xs-12">
+                                    <span>Street</span>
+                                    <p ng-cloak data-editable>
+                                        {{element.address}}<br> {{element.street}}
+                                    </p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>City</span>
+                                    <p ng-cloak> {{element.city}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>State</span>
+                                    <p ng-cloak>{{element.state}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Pincode</span>
+                                    <p ng-cloak>{{element.zipcode}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Country</span>
+                                    <p ng-cloak>{{element.country}}</p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Region</span>
+                                    <p ng-cloak>{{element.region}}</p>
+                                </div>
+                                <div class="col-md-2 col-xs-6">
+                                    <span>Delivery Type</span>
+                                    <p ng-cloak>{{element.gate_list[0].delivery_type}}</p>
+                                </div>
+
+                                <div class="col-sm-1">
+                                    <a href="javascript:void(0);" class="faq-links" data-toggle="collapse" data-target="#gate_open{{list1[$index]}}">
+                                        <i class="fa toggler fa-angle-right fa-2x"></i><i class="fa toggler fa-angle-down fa-2x" style="visibility: hidden;"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <hr class="hidden-lg text-center">
+                            <div class="container collapse" id="gate_open{{list1[$index]}}" aria-expanded="true">
+                                <div class="row" ng-repeat="uitem in element.user">
                                     <div class="col-md-2 col-xs-6">
-                                        <span>Delivery Type</span>
-                                        <p ng-cloak>{{element.gate_list[0].delivery_type}}</p>
+                                        <span>Manager Name</span>
+                                        <p ng-cloak>{{uitem.name}}</p>
                                     </div>
-
-                                    <div class="col-sm-1">
-                                        <a href="javascript:void(0);" class="faq-links" data-toggle="collapse" data-target="#gate_open{{list1[$index]}}">
-                                            <i class="fa toggler fa-angle-right fa-2x"></i><i class="fa toggler fa-angle-down fa-2x" style="visibility: hidden;"></i>
-                                        </a>
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Email Id</span>
+                                        <p ng-cloak>{{uitem.email_id}}</p>
                                     </div>
-
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Phone Number</span>
+                                        <p ng-cloak>{{uitem.mobile_no}}</p>
+                                    </div>
                                 </div>
-                                <hr class="hidden-lg text-center">
-                                <div class="container collapse" id="gate_open{{list1[$index]}}" aria-expanded="true">
-                                    <div class="row" ng-repeat="uitem in element.user">
-                                        <div class="col-md-2 col-xs-6">
-                                            <span>Manager Name</span>
-                                            <p ng-cloak>{{uitem.name}}</p>
+                                <div class="container logorgs" ng-repeat="gitem in element.gate_list">
+                                    <div class="container-fluid">
+                                        <div class="col-md-2 first">
+                                            <span>Gate Name</span>
+                                            <p ng-cloak>{{gitem.gate_number}}</p>
                                         </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <span>Manager Email Id</span>
-                                            <p ng-cloak>{{uitem.email_id}}</p>
+                                        <div class="col-md-5">
+                                            <span>Street</span>
+                                            <p ng-cloak>{{gitem.address}}</p>
                                         </div>
-                                        <div class="col-md-3 col-xs-6">
-                                            <span>Manager Phone Number</span>
-                                            <p ng-cloak>{{uitem.mobile_no}}</p>
+                                        <div class="col-md-1">
+                                            <span>City</span>
+                                            <p ng-cloak>{{gitem.country}}</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>State</span>
+                                            <p ng-cloak>{{gitem.state}}</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Pincode</span>
+                                            <p ng-cloak>{{gitem.pincode}}</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Country</span>
+                                            <p ng-cloak>{{gitem.country}}</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Region</span>
+                                            <p ng-cloak>{{gitem.region}}</p>
                                         </div>
                                     </div>
-                                    <div class="container logorgs" ng-repeat="gitem in element.gate_list">
-                                        <div class="container-fluid">
-                                            <div class="col-md-2 first">
-                                                <span>Gate Name</span>
-                                                <p ng-cloak>{{gitem.gate_number}}</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <span>Street</span>
-                                                <p ng-cloak>{{gitem.address}}</p>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <span>City</span>
-                                                <p ng-cloak>{{gitem.country}}</p>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <span>State</span>
-                                                <p ng-cloak>{{gitem.state}}</p>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <span>Pincode</span>
-                                                <p ng-cloak>{{gitem.pincode}}</p>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <span>Country</span>
-                                                <p ng-cloak>{{gitem.country}}</p>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <span>Region</span>
-                                                <p ng-cloak>{{gitem.region}}</p>
-                                            </div>
+                                    <div class="container-fluid">
+                                        <div class="col-md-2 first">
+                                            <span>SAP ID</span>
+                                            <p ng-cloak>{{gitem.sap_id}}</p>
                                         </div>
-                                        <div class="container-fluid">
-                                            <div class="col-md-2 first">
-                                                <span>SAP ID</span>
-                                                <p ng-cloak>{{gitem.sap_id}}</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Managed by</span>
-                                                <p ng-cloak>{{gitem.name}}</p>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <span>Mobile Number</span>
-                                                <p ng-cloak>{{gitem.mobile_no}}</p>
-                                            </div>
+                                        <div class="col-md-3">
+                                            <span>Managed by</span>
+                                            <p ng-cloak>{{gitem.name}}</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span>Mobile Number</span>
+                                            <p ng-cloak>{{gitem.mobile_no}}</p>
                                         </div>
                                     </div>
                                 </div>
-                         
-        
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -340,6 +477,7 @@
 
             })
         });
+        
 
     </script>
 
