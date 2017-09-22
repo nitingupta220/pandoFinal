@@ -36,7 +36,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid" style="padding-left: 0;">
+    <div class="container-fluid" style="padding-left: 0;padding-right: 0;">
         <div id="myNavbar">
             <div class="col-sm-2 col-md-2 col-lg-1 col1">
                 <div class="sidebar">
@@ -72,13 +72,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="bu_cc">
+                            <a href="bu-and-cc-main.htm" class="bu_cc">
                                 <img src="images/BU CC.svg" alt="">
                                 <p>BU and CC</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="users">
+                            <a href="users.htm" class="users">
                                 <img src="images/Users.svg" alt="">
                                 <p>Users</p>
                             </a>
@@ -101,8 +101,57 @@
                              <option value="">Select City</option>
                         </select>
                     </div>
-                    <div class="col-xs-6 col-sm-5 col-md-3 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#add_logorg">Add New Consignee</a>
-                        <div class="modal fade" id="add_logorg" role="dialog">
+                    <div class="col-xs-6 col-sm-5 col-md-3 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#bulk">Add New Consignee</a>
+                        <div class="modal fade" id="bulk" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add New Consignee</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container text-center">
+                                            <div class="col-md-12">
+                                                <a href="#" class="add" data-toggle="modal" data-target="#add_consignee">Add Single Consignee</a>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="or">OR</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <a href="#" class="add" data-toggle="modal" data-target="#bulkUpload">Upload Bulk Consignee</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal fade" id="bulkUpload" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add New Consignee</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <a href="#" class="btn">Download Sample</a>
+                                            <a href="#" class="btn btn-success ">Bulk Upload
+                                               <input type="file" id="file" style="display: none;">
+                                           </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal fade" id="add_consignee" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -113,7 +162,7 @@
                                         <form>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label>LogOrg Name</label>
+                                                    <label>Consignee Name</label>
                                                     <input type="text" class="form-control" id="" required>
                                                 </div>
                                                 <div class="form-group">
@@ -140,6 +189,12 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
+                                                    <label>Delivery Type</label>
+                                                    <select name="" id="" class="form-control">
+                                                       <option value="">Select Delivery Type</option>
+                                                   </select>
+                                                </div>
+                                                <div class="form-group">
                                                     <label>Pincode</label>
                                                     <input type="text" class="form-control" id="" required>
                                                 </div>
@@ -159,9 +214,9 @@
                                                     <label>Manager Phone Number</label>
                                                     <input type="text" class="form-control" id="" required>
                                                 </div>
-                                                <a href="#" class="add-manager">Add Manager</a>
+
                                             </div>
-                                            <div class="col-sm-12 text-center"><button type="button" class="btn" data-toggle="modal" data-target="#vendor_added">Add</button>
+                                            <div class="col-sm-12 text-center"><button type="button" class="btn">Add</button>
 
                                             </div>
                                         </form>
@@ -170,22 +225,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="vendor_added" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <header>
-                                    <h1>Add New LogOrg</h1>
-                                </header>
-                                <div class="modal-body text-center">
-                                    <img src="images/added-sucess.png" width="122" height="122" alt="" /><br>
-                                    <h3>New Vendor Added Successfully</h3> <br>
-                                    <div class="col-sm-6 text-center"><button type="button" class="btn">Add More</button></div>
-                                    <div class="col-sm-6 text-center"><button type="button" class="btnclose">Close</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <div class="content" when-scrolled="loadMore()">
@@ -193,13 +233,21 @@
                         <div class="container" id="card" ng-repeat="element in data | filter:query | limitTo:orderToDisplay">
 
                             <div class="row header">
-                                <div class="col-md-4 col-xs-6" ng-cloak>
+                                <div class="col-md-3 col-xs-6" ng-cloak>
                                     {{element.company_name}}
                                 </div>
                                 <div class="col-md-3 hidden-xs" ng-cloak>Delivery Type : {{element.delivery_type}}</div>
                                 <div class="col-md-3 col-xs-6" ng-cloak>Phone Number : {{element.office_phone}}</div>
                                 <div class="col-md-2 col-xs-6" ng-cloak>SAPID : {{element.ref_id}}</div>
-
+                                <div class="col-md-1 hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle open_menu" data-toggle="dropdown"></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row body">
                                 <div class="col-md-4 col-xs-12">
@@ -276,7 +324,6 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
-
     </script>
     <script src="script.js"></script>
 </body>

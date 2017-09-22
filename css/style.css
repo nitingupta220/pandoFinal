@@ -131,6 +131,7 @@ body {
 #services .container {
     /* padding: 10% 8% 10% 10%; */
 }
+
 #services .row .col-md-12 ul li a img {
     color: #42b02b;
 }
@@ -329,9 +330,8 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 0px;
 }
-
 
 .sidebar ul li {
     display: block;
@@ -344,15 +344,16 @@ body {
 .sidebar ul li:hover {
     background: #f4f4f4;
 }
+
 .sidebar ul li a {
     text-align: center;
     color: #6a6b68;
     font-size: 15px
 }
+
 .sidebar ul li a:hover {
     text-decoration: none;
 }
-
 
 .sidebar .active {
     border-left: 4px solid #42b02b;
@@ -386,11 +387,13 @@ body {
     text-decoration: none;
 }
 */
+
 .sidebar ul li a img {
     height: 30px;
     width: 30px;
     margin: auto;
 }
+
 
 /*
 .sidebar ul li a p {
@@ -479,8 +482,6 @@ table.listing {
     margin-bottom: 15px
 }
 
-
-/*
 table.listing th {
     background: #bbc9d6;
     color: #0b284d;
@@ -506,7 +507,6 @@ table td textarea {
     padding: 3px 10px;
     border-radius: 5px
 }
-*/
 
 .open_menu:after {
     content: '\2807';
@@ -1057,15 +1057,184 @@ a.modal_link {
     text-align: center;
     padding: 20px;
 }
-#rate .table > thead > tr > td {
+
+#rate .table>thead>tr>td {
     padding-bottom: 20px;
 }
+
 #detention {
     padding: 25px;
 }
+
 #menu1 table {
     table-layout: fixed;
 }
+
 #menu1 th {
     width: 220px;
+}
+
+#bulk .modal-header {
+    background-color: #002e4e;
+    text-align: center;
+    color: #ffffff;
+    height: 56px;
+    padding-top: 10px;
+}
+
+#bulk .modal-content {
+    height: 50%;
+}
+
+#bulk .modal-title {
+    font-size: 23px;
+}
+
+#bulk .close {
+    font-size: 44px;
+}
+
+#bulk .modal-body .col-md-12 {
+    padding-bottom: 10px;
+}
+
+#bulk .modal-body .container .add {
+    font-size: 25px;
+    font-weight: 500;
+    color: #002e4e;
+}
+
+#bulk .modal-body .container .or {
+    font-size: 25px;
+    font-weight: 500;
+    color: #41ae2b;
+}
+
+#bulkUpload .modal-header {
+    background-color: #002e4e;
+    text-align: center;
+    color: #ffffff;
+    height: 56px;
+    padding-top: 10px;
+}
+
+#bulkUpload .close {
+    font-size: 44px;
+}
+
+#bulkUpload .modal-content {
+    height: 55%;
+}
+
+#bulkUpload .modal-body {
+    padding-top: 50px;
+    min-height: 225px;
+}
+
+#bulkUpload .btn {
+    border-radius: 2px;
+    border: solid 1px #41ae2b;
+    background: #ffffff;
+    color: #41ae2b;
+    width: 226px;
+    height: 52px;
+    font-size: 23px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+#bulkUpload .btn-success {
+    background: #41ae2b;
+    color: white;
+    float: right;
+}
+
+#bulkUpload1 .modal-header {
+    background-color: #002e4e;
+    text-align: center;
+    color: #ffffff;
+    height: 56px;
+    padding-top: 10px;
+}
+
+#bulkUpload1 .close {
+    font-size: 44px;
+}
+
+#bulkUpload1 .modal-content {
+    height: 55%;
+}
+
+#bulkUpload1 .modal-body {
+    padding-top: 50px;
+    min-height: 225px;
+}
+
+#bulkUpload1 .btn {
+    border-radius: 2px;
+    border: solid 1px #41ae2b;
+    background: #ffffff;
+    color: #41ae2b;
+    width: 226px;
+    height: 52px;
+    font-size: 23px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+#bulkUpload1 .btn-success {
+    background: #41ae2b;
+    color: white;
+    float: right;
+}
+
+#add_user .modal-body {
+    padding: 0;
+    padding-top: 12px;
+}
+
+#add_user .modal-content {
+    width: 61%;
+    margin-left: 20%;
+}
+
+#edit_user .modal-header {
+    padding: 5px;
+}
+
+#edit_user .modal-content {
+    width: 80%;
+    margin-left: 13%;
+}
+#edit_user .modal-body {
+    padding-top: 10px;
+}
+
+#edit_user .btn-default {
+    width: 85px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #41ae2b;
+    color: #41ae2b;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+#edit_user .btn-success {
+    width: 85px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #41ae2b;
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+#edit_user .form-control {
+    width: 317px;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #979797;
 }

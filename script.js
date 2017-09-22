@@ -143,7 +143,31 @@
 //});
 
 $(document).ready(function () {
-            $('.sidebar ul li').on('click', function() {
-                $('li').addClass('.sidebar .active');
-            })
-        })
+    $('.sidebar ul li').on('click', function () {
+        $(this).addClass('.sidebar .active');
+    });
+});
+
+
+
+
+
+
+
+//Bulk Upload File 
+$(document).ready(function () {
+    $('.btn-success').on('click', function () {
+        $('#file').trigger('click');
+        return false;
+    });
+});
+
+//jQuery(function ($) {
+//    $('input[type="file"]').change(function () {
+//        console.log(123);
+//        if ($(this).val()) {
+//            var filename = $(this).val();
+//            $(this).closest('.first').find('.upload-path').html(filename);
+//        }
+//    });
+//});

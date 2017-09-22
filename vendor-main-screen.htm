@@ -35,48 +35,50 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid" style="padding-left: 0px;">
+    <div class="container-fluid" style="padding-left: 0px;padding-right: 0;">
         <div id="myNavbar">
             <div class="col-sm-2 col-md-2 col-lg-1 col1">
                 <div class="sidebar">
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="logorg-main-screen.htm" class="logorg">
+                                <img src="images/Logorg.svg" alt="">
                                 <p>Logorgs</p>
                             </a>
                         </li>
                         <li>
                             <a href="consignee-main-screen.htm" class="consignee">
+                                <img src="images/Consignee 1.svg" alt="">
                                 <p>Consignees</p>
                             </a>
                         </li>
                         <li>
                             <a href="vendor-main-screen.htm" class="vendors">
+                                <img src="images/Vendor.svg" alt="">
                                 <p>Vendors</p>
                             </a>
                         </li>
                         <li>
                             <a href="rate-matrix.htm" class="rate_matrix active">
+                                <img src="images/Rate Metrix.svg" alt="">
                                 <p>Rate Matrix</p>
                             </a>
                         </li>
                         <li>
                             <a href="master-material.htm" class="master_material">
+                                <img src="images/Material master.svg" alt="">
                                 <p>Master Material</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="bu_cc">
+                            <a href="bu-and-cc-main.htm" class="bu_cc">
+                                <img src="images/BU CC.svg" alt="">
                                 <p>GLCC</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="reports">
-                                <p>Reports</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="users">
+                            <a href="users.htm" class="users">
+                                <img src="images/Users.svg" alt="">
                                 <p>Users</p>
                             </a>
                         </li>
@@ -99,19 +101,117 @@
      <option value="">Select City</option>
     </select>
                     </div>
-                    <div class="col-sm-12 col-md-3 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#add_rate_matrix">Add new Vendor</a>
-                        <div class="modal fade" id="add_rate_matrix" role="dialog">
+                    <div class="col-sm-12 col-md-3 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#bulk">Add new Vendor</a>
+                        <div class="modal fade" id="bulk" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add New Vendor</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container text-center">
+                                            <div class="col-md-12">
+                                                <a href="#" class="add" data-toggle="modal" data-target="#add_vendor">Add Single Vendor</a>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="or">OR</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <a href="#" class="add" data-toggle="modal" data-target="#bulkUpload">Upload Bulk Vendors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal fade" id="bulkUpload" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add New Vendor</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <a href="#" class="btn">Download Sample</a>
+                                            <a href="#" class="btn btn-success ">Bulk Upload
+                                               <input type="file" id="file" style="display: none;">
+                                           </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal fade" id="add_vendor" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <header>
-                                        <h1>Add Bulk Rate Matrix</h1>
+                                        <h1>Add New Vendor</h1>
                                     </header>
                                     <div class="modal-body">
-                                        <div class="col-sm-6"><button type="button" class="btnclose">Download Sample</button></div>
-                                        <div class="col-sm-6 text-right"><button type="button" class="btn">Bulk Upload</button></div>
-                                        <div class="xls">Excel.xlsx</div>
-                                        <div class="col-sm-12 text-center"><input type="submit" class="btn btn-default" value="Add"></div>
+                                        <form>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Vendor Name</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>SAP ID</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Phone Number</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Street</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>City</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>State</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Pincode</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Region</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Manager Name</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Manager Email</label>
+                                                    <input type="text" class="form-control" id="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Manager Phone Number</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-12 text-center"><input type="submit" class="btn btn-default" value="Add"></div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +332,6 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
-
     </script>
     <script src="script.js"></script>
 </body>

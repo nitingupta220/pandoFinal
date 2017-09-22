@@ -26,13 +26,13 @@
                 <button id="close_toggle" type="button" class="navbar-toggle close_btn"> </button>
                 <a class="navbar-brand" href="index.htm"><img src="images/logo-white.png"></a>
             </div>
-            <div class="pull-right hidden-xs user"> <span><i class="fa fa-user-circle fa-4x"></i></span>
+            <div class="pull-right hidden-xs user"> <span><img src="images/bitmap.png" alt=""></span>
                 <h5>Super Admin</h5>
                 <h5>Mr. Nitin JayaKrishnan</h5>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-left: 0;padding-right:0;">
         <div id="myNavbar">
             <div class="col-sm-2 col-md-2 col-lg-1 col1">
                 <div class="sidebar">
@@ -68,13 +68,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="bu_cc">
+                            <a href="bu-and-cc-main.htm" class="bu_cc">
                                 <img src="images/BU CC.svg" alt="">
                                 <p>BU and CC</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="users">
+                            <a href="users.htm" class="users">
                                 <img src="images/Users.svg" alt="">
                                 <p>Users</p>
                             </a>
@@ -93,7 +93,30 @@
                         </form>
                     </div>
 
-                    <div class="col-sm-10 col-md-8 text-right"><a href="#" class="btn">Add BU and CC</a></div>
+                    <div class="col-sm-10 col-md-8 text-right"><a href="#" class="btn" data-toggle="modal" data-target="#bulkUpload">Add BU and CC</a></div>
+                </div>
+                <div class="modal fade" id="bulkUpload" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add New LogOrg</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <a href="#" class="btn">Download Sample</a>
+                                    <a href="#" class="btn btn-success ">Bulk Upload
+                                               <input type="file" id="file" style="display: none;">
+                                           </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
                 <div class="content">
                     <table width="100%" class="listing">
@@ -207,7 +230,6 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
-
     </script>
 </body>
 
