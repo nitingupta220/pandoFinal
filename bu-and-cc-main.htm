@@ -14,6 +14,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>BU and CC Main</title>
 </head>
@@ -104,13 +105,18 @@
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Add New LogOrg</h4>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body second">
                                 <div class="container">
                                     <a href="#" class="btn">Download Sample</a>
-                                    <a href="#" class="btn btn-success ">Bulk Upload
-                                               <input type="file" id="file" style="display: none;">
+                                    <a href="#" class="btn btn-success" id="upload">Bulk Upload
                                            </a>
-
+                                    <input type="file" id="file" style="display: none;">
+                                </div>
+                                <div class="col-md-12">
+                                    <span class="upload-path"></span>
+                                </div>
+                                <div class="container" style="text-align: center;">
+                                    <a href="#" class="btn" data-dismiss="modal" style="background: #42b02b;color: white;margin-top: 10px;">Add</a>
                                 </div>
                             </div>
 
@@ -231,6 +237,7 @@
             $("#menu_icon").show();
         });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

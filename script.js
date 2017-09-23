@@ -166,6 +166,12 @@ $(document).ready(function () {
     })
 })
 
+$(document).ready(function () {
+    $('#upload1').on('click', function () {
+        $('#file1').trigger('click');
+    })
+})
+
 jQuery(function ($) {
     $('input[type="file"]').change(function () {
         console.log(123);
