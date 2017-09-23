@@ -17,18 +17,6 @@
             });
         $scope.list1 = [1, 2, 3, 4];
 
-//        $scope.selected = {};
-//        $scope.edit = function (element) {
-//            $scope.selected = angular.copy(element);
-//        };
-//
-//        $scope.getTemplate = function (element) {
-//            if (element.plp_id === $scope.selected.plp_id) {
-//                return 'edit';
-//            } else {
-//                return 'display';
-//            }
-//        };
     }]);
 
 
@@ -112,11 +100,30 @@
 
 
             });
-        $scope.list1 = [1, 2, 3, 4];
+
     }]);
 })(window.angular);
 
 
+
+//angular code for users
+(function (angular) {
+    'use strict';
+    var app = angular.module("user", []);
+
+    app.controller("user_data", ["$scope", "$http", function ($scope, $http) {
+        //    here $http get a information from "logs_with_gates.json"     
+
+        $http.get("user.json")
+            //        then we will call then mathod to call function in which response argument gives all data contain in records as an Array 
+            .then(function (response) {
+
+                $scope.mydata = response.data;
+            });
+
+
+    }]);
+})(window.angular);
 
 
 //code for edit the details
@@ -143,6 +150,7 @@
 //});
 
 $(document).ready(function () {
+    'use strict';
     $('.sidebar ul li').on('click', function () {
         $(this).addClass('.sidebar .active');
     });
@@ -150,24 +158,20 @@ $(document).ready(function () {
 
 
 
+//File Upload Path
 
-
-
-
-//Bulk Upload File 
 $(document).ready(function () {
-    $('.btn-success').on('click', function () {
+    $('#upload').on('click', function () {
         $('#file').trigger('click');
-        return false;
+    })
+})
+
+jQuery(function ($) {
+    $('input[type="file"]').change(function () {
+        console.log(123);
+        if ($(this).val()) {
+            var filename = $(this).val();
+            $(this).closest('.second').find('.upload-path').text(filename);
+        }
     });
 });
-
-//jQuery(function ($) {
-//    $('input[type="file"]').change(function () {
-//        console.log(123);
-//        if ($(this).val()) {
-//            var filename = $(this).val();
-//            $(this).closest('.first').find('.upload-path').html(filename);
-//        }
-//    });
-//});

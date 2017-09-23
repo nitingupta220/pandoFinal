@@ -1206,6 +1206,7 @@ a.modal_link {
     width: 80%;
     margin-left: 13%;
 }
+
 #edit_user .modal-body {
     padding-top: 10px;
 }
@@ -1237,4 +1238,12 @@ a.modal_link {
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #979797;
+}
+
+.second .col-md-12 {
+    margin-top: 20px;
+    background: #d6ebd2;
+    width: 800x;
+    padding-top: 15px;
+    height: 52px;
 }

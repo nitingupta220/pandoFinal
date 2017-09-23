@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="user">
 
 <head>
     <meta charset="UTF-8">
@@ -16,12 +16,12 @@
     <script src="https://use.fontawesome.com/4bd930b540.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <title>Users Main Screen</title>
 </head>
 
-<body>
+<body ng-controller="user_data">
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -165,15 +165,15 @@
                 <div class="content">
 
                     <div class="container">
-                        <div class="container" id="card">
+                        <div class="container" id="card" ng-repeat="element in mydata | filter:test">
 
                             <div class="row header">
                                 <div class="col-md-5 col-xs-6" ng-cloak>
-                                    Mr. Nitin Gupta
+                                    {{element.full_name}}
                                 </div>
                                 <div class="col-md-1 hidden-xs"></div>
                                 <div class="col-md-3 col-xs-6" ng-cloak></div>
-                                <div class="col-md-2 col-xs-6" ng-cloak>Account Status : Active</div>
+                                <div class="col-md-2 col-xs-6" ng-cloak>Account Status : {{element.account_status}}</div>
                                 <div class="col-md-1 hidden-xs">
                                     <div class="dropdown">
                                         <a href="#" class="dropdown-toggle open_menu" data-toggle="dropdown"></a>
@@ -255,26 +255,26 @@
                                 <div class="col-md-2 col-xs-12">
                                     <span>User role</span>
                                     <p ng-cloak data-editable>
-                                        Logorg Manager
+                                        {{element.user_type}}
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-xs-6">
                                     <span>Admin</span>
-                                    <p ng-cloak> Mr. Selvam</p>
+                                    <p ng-cloak> {{element.full_name}}</p>
                                 </div>
-                                <div class="col-md-2 col-xs-6">
+                                <div class="col-md-3 col-xs-6">
                                     <span>Assigned PLP</span>
-                                    <p ng-cloak>Philips Lighting Chennai</p>
+                                    <p ng-cloak>{{element.plp_name}}</p>
                                 </div>
                                 <div class="col-md-2 col-xs-6">
                                     <span>Phone Number</span>
-                                    <p ng-cloak>987654321</p>
+                                    <p ng-cloak>{{element.mobile_no}}</p>
                                 </div>
                                 <div class="col-md-2 col-xs-6">
                                     <span>Email ID</span>
-                                    <p ng-cloak>Nitin@pando.in</p>
+                                    <p ng-cloak>{{element.email_id}}</p>
                                 </div>
-                                <div class="col-md-1"></div>
+                                
 
 
                             </div>
@@ -304,7 +304,7 @@
         });
 
     </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
