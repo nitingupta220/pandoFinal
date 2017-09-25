@@ -31,7 +31,7 @@
 }
 
 body {
-    font-family: 'ubuntu';
+   font-family: 'Open Sans', sans-serif;
 }
 
 .navbar {
@@ -144,7 +144,7 @@ body {
     display: block;
 }
 
-.search_header .btn {
+ .search_header .btn {
     background: #41ae2b;
     color: #ffffff;
     border-radius: 2px;
@@ -152,7 +152,9 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
-
+#select .search_header {
+    width: 400px;
+}
 .search_header .btn:hover {
     transition: all 0.5s linear;
     opacity: 0.8
@@ -305,6 +307,11 @@ body {
     width: 8%;
     background: #fff;
     padding: 0
+}
+button.multiselect.dropdown-toggle.btn.btn-default {
+    width: 400px;
+    background: white;
+    color: #002e4e;
 }
 
 .col2 {

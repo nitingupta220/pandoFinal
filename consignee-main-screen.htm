@@ -235,8 +235,9 @@
 
                 <div class="content" when-scrolled="loadMore()">
                     <div class="container">
-                        <div class="container" id="card" ng-repeat="element in data | filter:query | limitTo:orderToDisplay">
+                        <div class="container" id="card" ng-repeat="element in data | filter:query | limitTo:orderToDisplay" ng-include="getTemplate(element)"></div>
 
+                        <script type="text/ng-template" id="display">
                             <div class="row header">
                                 <div class="col-md-3 col-xs-6" ng-cloak>
                                     {{element.company_name}}
@@ -248,11 +249,12 @@
                                     <div class="dropdown">
                                         <a href="#" class="dropdown-toggle open_menu" data-toggle="dropdown"></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#" ng-click="editConsignee(element)">Edit</a></li>
                                             <li><a href="#">Delete</a></li>
                                         </ul>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="row body">
                                 <div class="col-md-4 col-xs-12">
@@ -305,7 +307,132 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </script>
+                        <script type="text/ng-template" id="edit">
+                            <div class="container" style="float: right;position: relative;top: 92px;">
+                                <button ng-click="saveConsignee($index)">Save</button>
+                                <button ng-click="reset()">Cancel</button>
+
+                            </div>
+
+
+                            <div class="row header" style="padding: 0;padding-top: 10px;">
+                                <div class="col-md-5 col-xs-6" ng-cloak>
+                                    <input type="text" ng-model="selected.company_name" />
+                                </div>
+                                <div class="col-md-1 hidden-xs"></div>
+                                <div class="col-md-3 col-xs-6" ng-cloak>Delivery Type : <input type="text" ng-model="selected.delivery_type" /></div>
+                                <div class="col-md-2 col-xs-6" ng-cloak>Phone Number : <input type="text" ng-model="selected.office_phone" /></div>
+                                <div class="col-md-2 col-xs-6" ng-cloak>SAPID : <input type="text" ng-model="selected.ref_id" /></div>
+
+                            </div>
+                            <div class="row body">
+                                <div class="col-md-4 col-xs-12">
+                                    <span>Street</span>
+                                    <p ng-cloak data-editable>
+                                        <input type="text" ng-model="selected.address" /><br> <input type="text" ng-model="selected.street" />
+                                    </p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>City</span>
+                                    <p ng-cloak> <input type="text" ng-model="selected.city" /></p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>State</span>
+                                    <p ng-cloak><input type="text" ng-model="selected.state" /></p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Pincode</span>
+                                    <p ng-cloak><input type="text" ng-model="selected.zipcode" /></p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Country</span>
+                                    <p ng-cloak><input type="text" ng-model="selected.country" /></p>
+                                </div>
+                                <div class="col-md-1 col-xs-6">
+                                    <span>Region</span>
+                                    <p ng-cloak><input type="text" ng-model="selected.region" /></p>
+                                </div>
+                                <div class="col-md-2 col-xs-6">
+                                    <span>Delivery Type</span>
+                                    <p ng-cloak><input type="text" ng-model="selected.gate_list[0].delivery_type" /></p>
+                                </div>
+
+                                <div class="col-sm-1">
+                                    <a href="javascript:void(0);" class="faq-links" data-toggle="collapse" data-target="#gate_open{{list1[$index]}}">
+                                        <i class="fa toggler fa-angle-right fa-2x"></i><i class="fa toggler fa-angle-down fa-2x" style="visibility: hidden;"></i>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <hr class="hidden-lg text-center">
+                            <div class="container collapse" id="gate_open{{list1[$index]}}" aria-expanded="true">
+                                <div class="row" ng-repeat="uitem in selected.user">
+                                    <div class="col-md-2 col-xs-6">
+                                        <span>Manager Name</span>
+                                        <p ng-cloak><input type="text" ng-model="uitem.name" /></p>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Email Id</span>
+                                        <p ng-cloak><input type="text" ng-model="uitem.email_id" /></p>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6">
+                                        <span>Manager Phone Number</span>
+                                        <p ng-cloak><input type="text" ng-model="uitem.mobile_no" /></p>
+                                    </div>
+                                </div>
+                                <div class="container logorgs" ng-repeat="gitem in selected.gate_list">
+                                    <div class="container-fluid">
+                                        <div class="col-md-2 first">
+                                            <span>Gate Name</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.gate_number" /></p>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <span>Street</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.address" /></p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>City</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.country" /></p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>State</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.state" /></p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Pincode</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.pincode" /></p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Country</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.country" /></p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span>Region</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.region" /></p>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="col-md-2 first">
+                                            <span>SAP ID</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.sap_id" /></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span>Managed by</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.name" /></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span>Mobile Number</span>
+                                            <p ng-cloak><input type="text" ng-model="gitem.mobile_no" /></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </script>
+
                     </div>
                 </div>
             </div>
@@ -329,6 +456,7 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
+
     </script>
     <script src="script.js"></script>
 </body>

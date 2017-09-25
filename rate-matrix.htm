@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ratematrix">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/4bd930b540.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Rate Matrix</title>
     <style>
@@ -27,7 +29,9 @@
             width: 130px;
             display: none;
         }
-        
+
+
+        /*
          ::-webkit-scrollbar {
             width: 15px;
         }
@@ -47,6 +51,8 @@
          ::-webkit-scrollbar-corner {
             background-color: white;
         }
+*/
+
     </style>
 </head>
 
@@ -90,7 +96,7 @@
                         <li>
                             <a href="rate-matrix.htm" class="rate_matrix">
                                 <img src="images/Rate Metrix.svg" alt="">
-                                <p>Rate Matrix</p>
+                                <p>Contracts</p>
                             </a>
                         </li>
                         <li>
@@ -115,13 +121,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-md-10 col-lg-11 col2">
+        <div class="col-sm-10 col-md-10 col-lg-11 col2" when-scrolled="loadMore()">
             <div class="text-container">
                 <div class="search_header" id="rate">
                     <div class="col-sm-2 col-md-3" style="padding-left: 0;">
                         <ul class="nav nav-pills">
-                            <li class="active"><a data-toggle="pill" href="#home" class="change1">Detention Metrics</a></li>
-                            <li><a data-toggle="pill" href="#menu1" class="change">Rate Metrics </a></li>
+                            <li class="active"><a data-toggle="pill" href="#home" class="change1">Detention Matrix</a></li>
+                            <li><a data-toggle="pill" href="#menu1" class="change">Rate Matrix </a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3 col-md-4 ">
@@ -166,37 +172,37 @@
 
                         </div>
                     </div>
-                       <div class="modal fade" id="bulkUpload1" role="dialog">
-                            <div class="modal-dialog">
+                    <div class="modal fade" id="bulkUpload1" role="dialog">
+                        <div class="modal-dialog">
 
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Add New LogOrg</h4>
-                                    </div>
-                                    <div class="modal-body second">
-                                       <div class="container">
-                                           <a href="#" class="btn">Download Sample</a>
-                                           <a href="#" class="btn btn-success" id="upload1">Bulk Upload
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Add New LogOrg</h4>
+                                </div>
+                                <div class="modal-body second">
+                                    <div class="container">
+                                        <a href="#" class="btn">Download Sample</a>
+                                        <a href="#" class="btn btn-success" id="upload1">Bulk Upload
                                            </a>
-                                            <input type="file" id="file1" style="display: none;" >
-                                       </div>
-                                       <div class="col-md-12">
-                                           <span class="upload-path"></span>
-                                       </div>
-                                       <div class="container" style="text-align: center;">
-                                           <a href="#" class="btn" data-dismiss="modal" style="background: #42b02b;color: white;margin-top: 10px;">Add</a>
-                                       </div>
+                                        <input type="file" id="file1" style="display: none;">
                                     </div>
-                                    
+                                    <div class="col-md-12">
+                                        <span class="upload-path"></span>
+                                    </div>
+                                    <div class="container" style="text-align: center;">
+                                        <a href="#" class="btn" data-dismiss="modal" style="background: #42b02b;color: white;margin-top: 10px;">Add</a>
+                                    </div>
                                 </div>
 
                             </div>
+
                         </div>
+                    </div>
                 </div>
                 <div class="tab-content" id="detention">
-                    <div id="home" class="tab-pane fade in active">
+                    <div id="home" class="tab-pane fade in active" ng-controller="detentionMatrix">
                         <table width="99%" class="table text-center">
                             <thead>
                                 <tr class="text-center">
@@ -210,9 +216,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>123</td>
+                                <tr ng-repeat="element in mydata">
+                                    <td>{{element._id}}</td>
+                                    <td ng-repeat="(k,v) in element.delay">{{v.vehicle_id}}</td>
                                     <td>Delay</td>
                                     <td>2</td>
                                     <td>76607</td>
@@ -220,28 +226,11 @@
                                     <td>76607</td>
 
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>123</td>
-                                    <td>Delay</td>
-                                    <td>2</td>
-                                    <td>76607</td>
-                                    <td>76607</td>
-                                    <td>76607</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>123</td>
-                                    <td>Delay</td>
-                                    <td>2</td>
-                                    <td>76607</td>
-                                    <td>76607</td>
-                                    <td>76607</td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
-                    <div id="menu1" class="tab-pane fade" style="overflow-x: scroll;">
+                    <div id="menu1" class="tab-pane fade" style="overflow-x: scroll;" ng-controller="rateMatrix">
                         <table width="99%" class="table text-center">
                             <thead>
                                 <tr class="text-center">
@@ -268,73 +257,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>151167</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>32</td>
-                                    <td>Air-Courier</td>
-                                    <td>0</td>
-                                    <td>150</td>
-                                    <td>Om Logistics Limited</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>46</td>
-                                    <td>KG</td>
-                                    <td>01/01/2016</td>
-                                    <td>01/01/2016</td>
-                                    <td>920</td>
-                                    <td>5</td>
-                                    <td>CFT to KG Ratio</td>
-                                    <td>SL</td>
+                                <tr ng-repeat="element in mydata">
+                                    <td>{{element.ratematrix_id}}</td>
+                                    <td>{{element.ratematrix_sourcecitycode}}</td>
+                                    <td>{{element.sourcecitycode_desc}}</td>
+                                    <td>{{element.ratematrix_destinationcitycode}}</td>
+                                    <td>{{element.destinationcitycode_desc}}</td>
+                                    <td>{{element.ratematrix_vehicletypeid}}</td>
+                                    <td>{{element.vehicletype_desc}}</td>
+                                    <td>{{element.ratematrix_distance}}</td>
+                                    <td>{{element.ratematrix_forwardingagentid}}</td>
+                                    <td>{{element.ratematrix_forwardingagentname}}</td>
+                                    <td>{{element.ratematrix_preferenceno}}</td>
+                                    <td>{{element.ratematrix_transitdays}}</td>
+                                    <td>{{element.ratematrix_rate}}</td>
+                                    <td>{{element.ratematrix_uom_flag}}</td>
+                                    <td>{{element.ratematrix_validfrom}}</td>
+                                    <td>{{element.ratematrix_validto}}</td>
+                                    <td>{{element.ratematrix_minimumrate}}</td>
+                                    <td>{{element.ratematrix_multiplyingfactor}}</td>
+                                    <td>{{element.ratematrix_minimumrate_uom}}</td>
+                                    <td>{{element.ratematrix_delaydetention_group}}</td>
 
                                 </tr>
-                                <tr>
-                                    <td>151167</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>32</td>
-                                    <td>Air-Courier</td>
-                                    <td>0</td>
-                                    <td>150</td>
-                                    <td>Om Logistics Limited</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>46</td>
-                                    <td>KG</td>
-                                    <td>01/01/2016</td>
-                                    <td>01/01/2016</td>
-                                    <td>920</td>
-                                    <td>5</td>
-                                    <td>CFT to KG Ratio</td>
-                                    <td>SL</td>
-                                </tr>
-                                <tr>
-                                    <td>151167</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>N</td>
-                                    <td>Region-North</td>
-                                    <td>32</td>
-                                    <td>Air-Courier</td>
-                                    <td>0</td>
-                                    <td>150</td>
-                                    <td>Om Logistics Limited</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>46</td>
-                                    <td>KG</td>
-                                    <td>01/01/2016</td>
-                                    <td>01/01/2016</td>
-                                    <td>920</td>
-                                    <td>5</td>
-                                    <td>CFT to KG Ratio</td>
-                                    <td>SL</td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -372,6 +318,7 @@
                 $('.form').hide();
             })
         })
+
     </script>
     <script src="script.js"></script>
 </body>
