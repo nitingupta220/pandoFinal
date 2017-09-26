@@ -31,7 +31,8 @@
 }
 
 body {
-   font-family: 'Open Sans', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
+    
 }
 
 .navbar {
@@ -144,7 +145,7 @@ body {
     display: block;
 }
 
- .search_header .btn {
+.search_header .btn {
     background: #41ae2b;
     color: #ffffff;
     border-radius: 2px;
@@ -152,9 +153,11 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
+
 #select .search_header {
     width: 400px;
 }
+
 .search_header .btn:hover {
     transition: all 0.5s linear;
     opacity: 0.8
@@ -270,7 +273,7 @@ body {
     padding: 20px;
 }
 
-#services .service figure>img {
+#services .service figure > img {
     width: 50px;
 }
 
@@ -282,7 +285,7 @@ body {
     margin-bottom: -5px;
 }
 
-#services .service figure figcaption>span {
+#services .service figure figcaption > span {
     color: #4cae4c;
 }
 
@@ -308,6 +311,7 @@ body {
     background: #fff;
     padding: 0
 }
+
 button.multiselect.dropdown-toggle.btn.btn-default {
     width: 400px;
     background: white;
@@ -1032,9 +1036,9 @@ a.modal_link {
     border: solid 1px #979797
 }
 
-#rate .nav-pills>li.active>a,
-.nav-pills>li.active>a:focus,
-.nav-pills>li.active>a:hover {
+#rate .nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
     background: white;
     font-size: 15px;
     font-weight: 600;
@@ -1044,7 +1048,7 @@ a.modal_link {
     border-radius: 0;
 }
 
-#rate .nav-pills>li>a {
+#rate .nav-pills > li > a {
     font-size: 15px;
     font-weight: 500;
     text-align: center;
@@ -1055,17 +1059,17 @@ a.modal_link {
     background: white;
 }
 
-#rate .table>caption+thead>tr:first-child>td,
-.table>caption+thead>tr:first-child>th,
-.table>colgroup+thead>tr:first-child>td,
-.table>colgroup+thead>tr:first-child>th,
-.table>thead:first-child>tr:first-child>td,
-.table>thead:first-child>tr:first-child>th {
+#rate .table > caption + thead > tr:first-child > td,
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > td,
+.table > thead:first-child > tr:first-child > th {
     text-align: center;
     padding: 20px;
 }
 
-#rate .table>thead>tr>td {
+#rate .table > thead > tr > td {
     padding-bottom: 20px;
 }
 
@@ -1253,4 +1257,8 @@ a.modal_link {
     width: 800x;
     padding-top: 15px;
     height: 52px;
+}
+
+.text-right {
+    float: right;
 }
