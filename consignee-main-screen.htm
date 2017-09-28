@@ -307,22 +307,21 @@
                             </div>
                         </script>
                         <script type="text/ng-template" id="edit">
-                            <div class="container" style="float: right;position: relative;top: 92px;">
-                                <button ng-click="saveConsignee($index)">Save</button>
-                                <button ng-click="reset()">Cancel</button>
 
-                            </div>
 
 
                             <div class="row header" style="padding: 0;padding-top: 10px;">
-                                <div class="col-md-5 col-xs-6" ng-cloak>
+                                <div class="col-md-3 col-xs-6" ng-cloak>
                                     <input type="text" ng-model="selected.company_name" />
                                 </div>
-                                <div class="col-md-1 hidden-xs"></div>
-                                <div class="col-md-3 col-xs-6" ng-cloak>Delivery Type : <input type="text" ng-model="selected.delivery_type" /></div>
+
+                                <div class="col-md-2 col-xs-6" ng-cloak>Delivery Type : <input type="text" ng-model="selected.delivery_type" /></div>
                                 <div class="col-md-2 col-xs-6" ng-cloak>Phone Number : <input type="text" ng-model="selected.office_phone" /></div>
                                 <div class="col-md-2 col-xs-6" ng-cloak>SAPID : <input type="text" ng-model="selected.ref_id" /></div>
-
+                                <div class="col-md-3 col-lg-3">
+                                    <button ng-click="saveConsignee($index)">Save</button>
+                                    <button ng-click="reset()">Cancel</button>
+                                </div>
                             </div>
                             <div class="row body">
                                 <div class="col-md-4 col-xs-12">
@@ -454,7 +453,6 @@
             $("#close_toggle").hide();
             $("#menu_icon").show();
         });
-
     </script>
     <script src="script.js"></script>
 </body>
