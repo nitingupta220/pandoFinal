@@ -1287,7 +1287,7 @@ a.modal_link {
 }
 
 #email .body .button .btn {
-
+    width: 20%;
     border-radius: 2px;
     background-color: #72b339;
     outline-color: #72b339;
