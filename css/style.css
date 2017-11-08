@@ -1,13 +1,15 @@
 body {
     font-family: 'Noto Sans', sans-serif;
-
+    padding: 0;
+    margin: 0;
+    height: 100vh;
 }
 
 .navbar {
     background-color: #0a3957;
     border-radius: 0;
     height: 60px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -1390,116 +1392,490 @@ a.modal_link {
     }
 }
 
-
 #orders {
-    font-family: 'Noto Sans', sans-serif;
-    background-image: linear-gradient(to right, #e5d2db, rgba(220, 220, 236, 1) 34%, #c1cbe7);
+    padding-right: auto;
+    background: #eee;
 
 }
 
 #orders .navbar {
-    background-color: #ffffff;
-    border: solid 0.5px #523232;
+    background: #002034;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem 0;
 }
 
-#orders .container-fluid {
-    opacity: 0.5;
-    background-image: linear-gradient(to right, #e5d2db, rgba(220, 220, 236, 1) 34%, #c1cbe7);
-    position: relative;
-    top: 60px;
+#orders .navbar .header {
+    width: 100%;
 }
 
-#orders .container-fluid .actions {
-    background-color: #f7f9fa;
-    border: solid 0.5px #ffffff;
-    height: 90vh;
-    padding-top: 2rem;
-    padding-left: 1.5rem;
-}
-#orders .container-fluid .tab {
-    margin-top: 1rem;
+#orders .navbar .header img {
+    height: 100%;
+    width: 100%;
 }
 
-#orders .container-fluid .actions .custom-select {
-    border: none;
-    border-bottom: 1px solid #86a8ff;
-    background: #f7f9fa;
+#orders .navbar .navs {
+    width: 100%;
+}
+
+#orders .navbar .navs .user-details {
+    color: #ced1d7;
+    padding-left: 0.8rem;
+}
+
+#orders .navbar .navs .user-details span {
+    font-size: 0.85rem;
+}
+
+#orders .navbar .navs .user-details p {
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+}
+
+#orders .navbar .navs .user-details .fa {
+    margin-top: .3em;
+    color: #ced1d7;
+    font-size: 1.2em;
+    padding-right: 1rem;
+}
+
+#orders .navbar .navs .nav {
+    width: 100%;
+}
+
+#orders .navbar .navs .nav ul li a:hover {
+    background: #001b2d;
+    color: white;
+    transition: 0.5s;
+}
+
+#orders .navbar .navs .nav ul li a {
+    color: #b2bbc9;
+    font-size: 0.75em;
+    padding: 1.5em 1em 1.3em 2em;
+}
+
+#orders .navbar .navs .nav ul li a img {
+    padding: 0 0.9em 0 0;
+    width: 19%;
+}
+
+#orders .filters {
+    position: fixed;
+    left: 16%;
+    background: #002f4d;
+    max-width: 23%;
+    height: 100vh;
+}
+
+#orders .filters .header {
+    width: 100%;
+    padding: 2%;
+}
+
+#orders .filters .header input[type=text] {
+    background: #002f4d;
+    border: solid 1px #002f4d;
+    box-sizing: border-box;
+    color: white;
+    padding: 0.5em;
+    outline-color: #002f4d;
+}
+
+#orders .filters .header .dropdown .btn-success {
+    background: #37ad59;
     border-radius: 0;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: left;
-    color: #404040;
-    padding: .375rem 1.75rem 0 0;
-    width: 120px;
-    
-}
-#orders .container-fluid .actions input {
-    background: #f7f9fa;
+    font-size: 0.75rem;
+    margin: 0.5em;
+    width: 95%;
     border: none;
-    width: 50%;
-    outline-color: #f7f9fa;
-}
-#orders .container-fluid .actions img {
-    width: 16px;
-    height: 20px;
+    box-shadow: none;
+
 }
 
-#orders .container-fluid .actions h6 {
-    font-size: 12px;
+#orders .filters .header .dropdown .dropdown-menu {
+    width: 95%;
+    border-radius: 0;
+
+}
+
+#orders .filters .back {
+    border-bottom: 1px solid #002034;
+}
+
+#orders .filters .back .fa {
+    color: white;
+    margin: 0.2em 0.3em 0 0.2em;
+}
+
+#orders .filters .back a {
+    text-decoration: none;
+    color: white;
+}
+
+#orders .filters .orders {
+    padding: 1em 0 0 1em;
+    color: white;
+}
+
+#orders .filters .orders .orderlist {
+    padding: 1em;
+    border-bottom: 1px solid #13364a;
+    padding: 20px 30px;
+    cursor: pointer;
+    background: #002f4d;
+    width: 100%;
+    font-size: 0.9em;
+    color: #dee1e5;
+}
+
+#orders .filters .orders .orderlist .badge {
+    margin: 0 0 0 2em;
+    border: 1px solid #de5255;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#orders .view {
+    left: 39%;
+}
+
+#orders .view .heading {
+    padding: 1em;
+    font-size: 0.8em;
     font-weight: bold;
-    letter-spacing: 0.6px;
-    text-align: left;
-    color: #606060;
 }
 
-#orders .container-fluid .actions p {
-    font-size: 12px;
-    text-align: left;
-    color: #404040;
-    margin-bottom: 0;
-}
-
-#orders .dropdown-menu {
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 28px 0 #dee2e4;
-    border: solid 0.5px #ffffff;
-}
-
-#orders .dropdown-menu a {
-    font-size: 14px;
-    text-align: center;
-    color: #404040;
-}
-
-#orders .dropdown-menu .dropdown-item:hover {
+#orders .view .singleOrder .details {
     background: white;
+    border-radius: 2px;
+    padding: 1em 0;
 }
 
-#orders .dropdown-menu .dropdown-divider {
-    height: 2px;
-    margin: .6rem 0 0 1.5rem;
-    overflow: hidden;
-    border-top: 1px solid #dee1ee;
-    width: 170px;
+#orders .view .singleOrder .details span {
+    color: #7f888f;
+    font-size: 0.75em;
 }
 
-#orders .navbar #nav-content div {
-    width: 40px;
-    text-align: center;
-    height: 40px;
-    border-radius: 70px;
-    opacity: 0.5;
-    background-image: linear-gradient(to right, #e5d2db, rgba(220, 220, 236, 1) 34%, #c1cbe7);
-    border: solid 0.5px #f4f4f4;
-    margin-right: 1rem;
+#orders .view .singleOrder .details p {
+    font-size: 0.75em;
 }
 
-#orders .navbar #nav-content p {
-    font-size: 18px;
+#orders .view .singleOrder .details .container {
+    border-bottom: 2px solid #f4f5f5;
+    padding-right: 0;
+    padding-top: 0.5em;
+}
+
+#orders .view .singleOrder .details .container .accordion {
+    background: #eee;
+    border-radius: 3px;
+}
+
+#orders .view .singleOrder .details .container .accordion span {
+    font-size: 0.65em;
+}
+
+#orders .view .singleOrder .materialDetail {
+    background: #f7f7f7;
+}
+
+#orders .view .singleOrder .materialDetail .actionButton {
+    padding: 2em 1em 0 0;
+}
+
+#orders .view .singleOrder .materialDetail .actionButton .col-12 {
+    margin: 0 1em 1.5em 0;
+}
+
+#orders .view .singleOrder .materialDetail .edit .btn-default {
+    background: white;
+    border: 1px solid #4d89ee;
+    font-size: 0.7em;
+    width: 100%;
+    border-radius: 2px;
+}
+
+#orders .view .singleOrder .materialDetail .material .btn-primary {
+    widows: 100%;
+    font-size: 0.7em;
+    border-radius: 2px;
+}
+
+#orders .view .singleOrder .materialDetail .loading span {
+    font-size: 0.7em;
+    color: #7f888f;
+}
+
+#orders .view .singleOrder .materialDetail .loading p {
+    font-size: 0.7em;
+}
+
+#orders .view .singleOrder .materialDetail .loading .edit {
+    background: white;
+    font-size: 0.7em;
+    border: 1px solid #4d89ee;
+
+}
+
+#orders .view .singleOrder .materialDetail .loading .btn-danger {
+    background: white;
+    font-size: 0.7em;
+    border: 1px solid #F40E12;
+    color: #f40e12;
+    margin: 1em;
+}
+
+#orders .view .singleOrder .materialDetail .modal-header .modal-title {
+    color: #949494;
+    font-size: 1.3em;
+    margin: auto;
+}
+
+#orders .view .singleOrder .materialDetail .modal-body {
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+#orders .view .singleOrder .materialDetail .modal-content {
+    width: 100%;
+    height: auto;
+}
+
+#orders .view .singleOrder .materialDetail .modal-footer {
+    border: none;
+    justify-content: flex-start;
+}
+
+#orders .view .singleOrder .materialDetail .material .modal-body .table th {
+    color: #46b01c;
+    font-size: 0.8em;
+}
+
+#orders .table th {
+    border: none;
+    font-size: 0.8em;
+}
+
+#orders .table td {
+    border: none;
+    font-size: 0.8em;
+}
+
+#orders .view .singleOrder .materialDetail .material .modal-body input[type=text] {
+    border-radius: 3px;
+    width: 100%;
+}
+
+#orders .single {
+    position: relative;
+    left: 39%;
+}
+
+#orders .single .heading {
+    font-size: 0.8em;
     font-weight: bold;
-    letter-spacing: 0.9px;
-    color: #616161;
-    padding-top: 0.3rem;
-    padding-left: 0.2rem;
+    padding: 1em;
+    color: #343534;
+}
+
+#orders .single .form {
+    background: white;
+    border-radius: 3px;
+    padding: 2em 2em 2em 2em;
+
+
+}
+
+#orders .single .form label {
+    font-size: 0.7em;
+}
+
+#orders .single form {
+    width: 100%;
+}
+
+#orders .single .form select {
+    width: 100%;
+    font-size: 0.7em;
+    height: 75%;
+    padding: 0.2em;
+}
+
+#orders .single .form input {
+    width: 100%;
+    font-size: 0.7em;
+    height: 75%;
+    padding: 0.2em
+}
+
+#orders .single .selectConsignee {
+    border-top: 2px solid #f4f5f5;
+    border-bottom: 2px solid #f4f5f5;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#orders .single .selectConsignee .btn-primary {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 0.8em;
+}
+
+#orders .single .submit .btn-danger {
+    background: white;
+    border-radius: 3px;
+    color: red;
+    width: 15%;
+    height: 60%;
+    font-size: 0.7em;
+}
+
+#orders .single .submit .btn-primary {
+    font-size: 0.7em;
+    height: 60%;
+    width: 15%;
+    border-radius: 3px;
+}
+
+#orders .single .form .heading {
+    color: #949494;
+    font-size: 1em;
+}
+
+#orders .single .form .list a {
+    text-decoration: none;
+    color: black;
+}
+
+#orders .single .form .search input[type=text] {
+    margin-left: 0px;
+    margin-bottom: 15px;
+    width: 88%;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: transparent;
+    background-image: url(../images/search.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 15px 40px;
+    position: relative;
+    color: #42b02b;
+    border-radius: 0px;
+    border: 0;
+    border-bottom: 1px solid #42b02b;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#orders .single .form .selectConsignee {
+    height: 40%;
+}
+
+#orders .single .form .selectConsignee .addConsignee {
+    height: 100%;
+    width: 30%;
+    border: 1px solid #ddd;
+    float: left;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px #e7e7e7;
+}
+
+#orders .single .form .selectConsignee .addConsignee .fa {
+    margin-top: 1em;
+    color: #1f96ef;
+}
+
+#orders .single .form .selectConsignee .addConsignee a {
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+#invoice h5 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333333;
+}
+
+#invoice h6 {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+#invoice p {
+    font-size: 0.8em;
+    color: #666666;
+    margin: 0;
+}
+
+#invoice span {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+#invoice .vendorDetails {
+    padding: 1em;
+    line-height: 1em;
+}
+
+#invoice h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: #3498db;
+    line-height: 0.5em;
+}
+
+#invoice .consigneeDetails {
+    margin-bottom: 10em;
+}
+#invoice .heading {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #002f4d;
+    border-bottom: 1px solid #002f4d;
+    margin-top: 3em;
+    padding-bottom: 1em;
+}
+
+#invoice .details {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: left;
+    color: #757575;
+    background: #faf9f9;
+    padding: 1em 0 1em 0;
+    border-radius: 2px;
+    margin-bottom: 1em;
+}
+
+#invoice .freight {
+    color: #3498db;
+}
+
+#invoice .foot {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+    color: #002f4d;
+    margin-top: 1em;
+}
+
+#invoice .footer .note {
+    font-size: 0.9em;
+    padding: 1em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #999999;
+}
+#invoice .footer .image {
+    border-top: 1px solid #002f4d;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+    word-spacing: 4px;
 }

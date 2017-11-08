@@ -5,59 +5,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Email</title>
 </head>
+<style>
+    .header {
+        background-image: linear-gradient(to bottom, #005a86, #002e4e);
+        height: 40%;
+        text-align: center;
+    }
+
+    img {
+        position: relative;
+        top: 10%;
+    }
+
+    .consignee {
+        height: auto;
+        width: 90%;
+        /*        margin-left: 5%;*/
+        margin: auto;
+        position: relative;
+        top: -20%;
+        background: white;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 5px 5px 70px 0 rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding-top: 0.2%;
+        padding-bottom: 1%;
+
+    }
+
+    h3 {
+        font-size: 150%;
+        font-weight: bold;
+        text-align: center;
+        color: #2e4255;
+    }
+
+    h4 {
+        font-size: 120%;
+        font-weight: bold;
+        text-align: center;
+        color: #2e4255;
+    }
+
+    p {
+        font-size: 110%;
+        font-weight: 300;
+        text-align: center;
+        color: #2e4255;
+    }
+
+    hr {
+        border: solid 0.5px #8a8a8a;
+        width: 90%;
+    }
+
+    table {
+        background: #f7f7f7;
+        margin: auto;
+        padding: 1%;
+
+    }
+
+    th {
+        font-size: 100%;
+        text-align: center;
+        color: #42b02b;
+        padding: 0 0 2% 0;
+
+    }
+
+    tr {
+        font-size: 90%;
+        font-weight: 300;
+        color: #2e4255;
+        padding: 0 0 2% 0;
+    }
+
+    button {
+        border-radius: 3px;
+        background-color: #42b02b;
+        outline-style: none;
+        border: none;
+        cursor: pointer;
+        width: 15%;
+        padding: 1%;
+        margin-top: -2%;
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .text {
+        font-size: 80%;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        color: #a7afb3;
+        margin-top: -7%;
+    }
+
+    @media (max-width: 576px) {
+        img {
+            width: 70%;
+        }
+        h3 {
+            font-size: 100%;
+        }
+        h4 {
+            font-size: 80%;
+        }
+        button {
+            font-size: 70%;
+            width: 40%;
+            padding: 3%;
+            margin-bottom: 1%;
+        }
+        .text {
+            margin-top: -25%;
+        }
+        p {
+            font-size: 80%;
+        }
+        th {
+            font-size: 70%;
+            
+        }
+        td {
+            font-size: 70%;
+        }
+    
+    }
+
+</style>
 
 <body>
-    <div class="container-fluid" id="email">
-        <div class="header text-center">
-            <img src="images/logo-white.png" alt="" class="img">
-        </div>
-        <div class="container body text-center">
-            <div class="col-md-12 col-lg-12- col-sm-12 col-xs-12">
-                <h3>Philips Lighting India - Gurgaon</h3>
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <h4>Has requested trucks for following routes</h4>
-                </div>
-            </div>
-            <hr>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-                        <span>Order ID</span>
-                        <p>PND-ORD-2219</p>
-                    </div>
-                     <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-                        <span>Truck Type</span>
-                        <p>34FT MXL HQ Container/2584 CFT/14000 KG</p>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
-                        <span>Pick up</span>
-                        <p>Chennai</p>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
-                        <span>Drop off</span>
-                        <p>Mumbai</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 button">
-                <a href="#" class="btn btn-success">Accept</a>
-            </div>
-        </div>
-        <div class="container bottom">
-            <p>Copyright © 2014 PandoCorp Pvt Ltd, All rights reserved. BHIVE Workspace, 9th Floor, Prestige Towers, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025</p>
-        </div>
+    <div class="header">
+        <img src="images/logo-white.png" alt="">
+    </div>
+    <div class="consignee">
+        <h3>Philips Lighting India - Gurgaon</h3>
+        <p>Has requested trucks for following orders </p>
+        <hr>
+        <table style="width: 90%;">
+            <tr>
+                <th>Order ID</th>
+                <th>Truck Type</th>
+                <th>Consignee Name</th>
+                <th>Pick up</th>
+                <th>Drop off</th>
+            </tr>
+
+            <tr>
+                <td>PND-ORD-2219</td>
+                <td>2048 CFT</td>
+                <td>Philips Lighting India Limited - Patna</td>
+                <td>Chennai</td>
+                <td>Mumbai</td>
+            </tr>
+        </table>
+        <h4>Click below to check more and assign a truck</h4>
+        <a href="#"><button>Assign a Truck</button></a>
+    </div>
+    <div class="text">
+        Copyright © 2014 PandoCorp Pvt Ltd, All rights reserved. BHIVE Workspace, 9th Floor, Prestige Towers, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025
     </div>
 </body>
 

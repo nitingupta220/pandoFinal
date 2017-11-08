@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add Single Consignee</title>
+</head>
+
+<body style="background: #eee;">
+    <div class="container-fluid" id="orders">
+        <div class="row">
+            <div class="navbar col-sm-2 col-md-2 col-lg-2 col-2">
+                <div class="header text-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/philips.png" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+                <div class="navs">
+                    <div class="user-details">
+                        <a href="#">
+                            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                        </a>
+                        <span>LogOrg Manager</span>
+                        <p>Mr. Gurgaon LogOrg</p>
+                    </div>
+                    <div class="nav">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/dashboard_white.svg" alt="">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/profit-report.svg" alt="">Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/outbound_white.svg" alt="">Outbound Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/inbound_white.svg" alt="">Inboud Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/delivered_order.svg" alt="">Delivered Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/icon-bulk-upld.png" alt="">Bulk Upload</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/icon-logout.png" alt="">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="filters col-sm-3 col-md-3 col-lg-3 col-3">
+                <div class="header text-center">
+                    <img src="images/search.svg" height="20" width="20" alt="">
+                    <input type="text" placeholder="Search all Orders">
+                    <div class="dropdown">
+                        <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CREATE A NEW ORDER
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Single Consignment</a>
+                            <a class="dropdown-item" href="#">Multi Consignments</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Export
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container back">
+                    <a href="#">
+                        <span><i class="fa fa-angle-left fa-2x"></i></span>Back
+                    </a>
+                </div>
+                <div class="orders container">
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                All orders <span class="badge pull-right">1234</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Intended orders <span class="badge pull-right">50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Assigned orders <span class="badge pull-right">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Arrived orders <span class="badge pull-right ">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Dispatched orders <span class="badge pull-right ">500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Cancelled orders <span class="badge pull-right">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 col-lg-7 col-7 single">
+                <div class="container heading">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <p>SINGLE CONSIGNMENT ORDER</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container form">
+                    <div class="row">
+                        <form>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                        <label>Order Type:</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-check">
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">Contract</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                                        <label for="logorg_name">LogOrg Name:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>PHILIPS Lighting INDIA LIMITED - GURGAON</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">LogOrg Gate Name:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>PHILIPS Lighting INDIA LIMITED - GURGAON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                                        <label for="logorg_name">Loading Date:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">Loading Time:(24 hours Format)</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <input type="text" style="width: 20%;height: 60%;border-radius: 3px;border: 1px solid #ccc;"> : <input type="text" style="width: 20%;height: 60%;border-radius: 3px;border: 1px solid #ccc;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 selectConsignee text-center">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <button class="btn btn-primary">Select Consignee</button>
+                                </a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content" style="height: 100%;margin-top: -5em;">
+                                            <div class="modal-body">
+                                                <div class="modal-body">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-12 heading text-center">
+                                                                <p>Select Consignee</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 list text-center">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><a href="#">A</a></li>
+                                                                    <li class="list-inline-item"><a href="#">B</a></li>
+                                                                    <li class="list-inline-item"><a href="#">C</a></li>
+                                                                    <li class="list-inline-item"><a href="#">D</a></li>
+                                                                    <li class="list-inline-item"><a href="#">E</a></li>
+                                                                    <li class="list-inline-item"><a href="#">F</a></li>
+                                                                    <li class="list-inline-item"><a href="#">G</a></li>
+                                                                    <li class="list-inline-item"><a href="#">H</a></li>
+                                                                    <li class="list-inline-item"><a href="#">I</a></li>
+                                                                    <li class="list-inline-item"><a href="#">J</a></li>
+                                                                    <li class="list-inline-item"><a href="#">K</a></li>
+                                                                    <li class="list-inline-item"><a href="#">L</a></li>
+                                                                    <li class="list-inline-item"><a href="#">M</a></li>
+                                                                    <li class="list-inline-item"><a href="#">N</a></li>
+                                                                    <li class="list-inline-item"><a href="#">O</a></li>
+                                                                    <li class="list-inline-item"><a href="#">P</a></li>
+                                                                    <li class="list-inline-item"><a href="#">Q</a></li>
+                                                                    <li class="list-inline-item"><a href="#">R</a></li>
+                                                                    <li class="list-inline-item"><a href="#">S</a></li>
+                                                                    <li class="list-inline-item"><a href="#">T</a></li>
+                                                                    <li class="list-inline-item"><a href="#">T</a></li>
+                                                                    <li class="list-inline-item"><a href="#">U</a></li>
+                                                                    <li class="list-inline-item"><a href="#">W</a></li>
+                                                                    <li class="list-inline-item"><a href="#">X</a></li>
+                                                                    <li class="list-inline-item"><a href="#">Y</a></li>
+                                                                    <li class="list-inline-item"><a href="#">Z</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row text-center">
+                                                            <div class="col-md-12 search">
+                                                                <input type="text" class="form-control" placeholder="Search">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row label text-center" style="font-size: 0.8em;margin-bottom: 0.3em;">
+                                                            <div class="col-sm-4">
+                                                                Name
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                ID
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                City
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="height: 400px;overflow-y: scroll;">
+                                                            <div class="row text-center" style="font-size: 0.8em;">
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-check">
+                                                                        <label class="custom-control custom-radio">
+                                                                        <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                                        <span class="custom-control-indicator"></span>
+                                                                        <span class="custom-control-description" style="margin-top: 0.4em;">A.R. Electricals</span>
+                                                                    </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    72010365
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    Sirsa
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Delivery Type:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-check">
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">PTL</span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">FTL</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Expected Delivery Date:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">Select Vendor:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>Select Vendor</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">Other Vehicle Requirements:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">Select Vehicle Type:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>Select Vehicle</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label for="logorg_name">Loading Charges:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>Paid By</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Loaders Available:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-check">
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">PTL</span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">FTL</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Unloading Charges:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <select class="form-control">
+                                            <option>Paid By</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Unloaders Available:</label>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-check">
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">PTL</span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description" style="margin-top: 0.4em;">FTL</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                        <label>Other Information:</label>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 submit text-right">
+                                <a href="#">
+                                    <button class="btn btn-danger">CANCEL</button>
+                                </a>
+                                <a href="#">
+                                    <button class="btn btn-primary">SUBMIT</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
