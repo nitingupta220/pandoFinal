@@ -1006,6 +1006,7 @@ a.modal_link {
     border: solid 1px #979797
 }
 
+/*
 #rate .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
@@ -1024,6 +1025,7 @@ a.modal_link {
     text-align: center;
     color: #002e4e;
 }
+*/
 
 #rate .nav-pills a:hover {
     background: white;
@@ -1834,6 +1836,7 @@ a.modal_link {
 #invoice .consigneeDetails {
     margin-bottom: 10em;
 }
+
 #invoice .heading {
     font-size: 0.8em;
     font-weight: 600;
@@ -1873,9 +1876,222 @@ a.modal_link {
     line-height: 1.2;
     color: #999999;
 }
+
 #invoice .footer .image {
     border-top: 1px solid #002f4d;
     margin: 1em 0 1em 0;
     padding: 1em;
     word-spacing: 4px;
+}
+
+#vendorInvoice .col-md-1 {
+    max-width: 60px;
+    width: 100%;
+}
+
+#vendorInvoice .sidebar {
+    background: #03132f;
+    float: left;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60px;
+}
+
+#vendorInvoice .sidebar img {
+    height: 20px;
+    width: 20px;
+}
+
+#vendorInvoice .sidebar img:hover {
+    filter: brightness(400%);
+}
+
+#vendorInvoice .sidebar .logo {
+    width: 28px;
+    height: 34.3px;
+}
+
+#vendorInvoice .sidebar .col-md-12 {
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+#vendorInvoice .details .header h1 {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #4d443f;
+}
+
+#vendorInvoice .details .header .nav-pills > li.active > a {
+    border-radius: 5px;
+    background-color: #389adc;
+    border: solid 1px #888888;
+    font-size: 12px;
+}
+
+#vendorInvoice .details .header .nav-pills > li > a {
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #389adc;
+    font-size: 12px;
+}
+
+#vendorInvoice .details .header p {
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.07;
+    color: #4d443f;
+}
+
+#vendorInvoice .details .header {
+    position: fixed;
+    top: 0;
+    width: 95%;
+}
+
+#vendorInvoice .details .tab-content {
+    position: relative;
+    top: 8em;
+}
+
+#vendorInvoice .details .table thead {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: #4d443f;
+}
+
+#vendorInvoice .details .table tbody td {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #848484;
+}
+
+#vendorInvoice .details .table-fixed {
+    width: 100%;
+}
+
+#vendorInvoice .details .table-fixed tbody {
+    height: 380px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+@media (min-width:1650px) {
+    #vendorInvoice .details .table-fixed tbody {
+        height: 764px;
+    }
+}
+
+#vendorInvoice .details #fixedTable thead,
+tbody,
+tr,
+td,
+th {
+    display: block;
+}
+
+#vendorInvoice .details .table-fixed tbody td {
+    float: left;
+    font-size: 14px;
+}
+
+#vendorInvoice .details .table-fixed thead tr th {
+    float: left;
+    font-size: 12px;
+}
+
+#vendorInvoice .details .tab-content .bottom {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: #333333;
+    padding: 0;
+}
+
+#vendorInvoice .details .tab-content .bottom span {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.01;
+    color: #3e9bd9;
+}
+
+#vendorInvoice .details .tab-content input[type=text] {
+    width: 100%;
+    height: 36px;
+    border-radius: 0;
+    border: 0.5px solid #cdcdcd;
+    font-weight: bold;
+    color: #404040;
+
+}
+
+#vendorInvoice .details .tab-content input[type=text]:focus {
+    box-shadow: 0px 0px 60px rgba(204, 205, 204, 1);
+    outline-color: #ccc;
+
+}
+
+#vendorInvoice .details .tab-content .table tr:nth-child(even) td {
+    padding: 0;
+}
+
+#vendorInvoice .details .tab-content #details {
+    overflow-y: scroll;
+    height: 500px;
+}
+@media (min-width:1650px) {
+    #vendorInvoice .details .tab-content #details {
+        height: 900px;
+    }
+}
+#vendorInvoice .details .tab-content #details .orderBody {
+    padding-top: 2em;
+}
+
+#vendorInvoice .details .tab-content #details p {
+    font-size: 12px;
+    color: #4d443f;
+}
+
+#vendorInvoice .details .tab-content #details span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4d443f;
+}
+
+#vendorInvoice .details .tab-content .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#vendorInvoice .details .tab-content #orderDetails .head .border {
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    color: #4d443f;
+    margin-top: 1em;
+}
+
+#vendorInvoice .details .tab-content #orderDetails .body .border {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    text-align: left;
+    height: 75px;
+    padding: 5px;
+    color: #333333;
+}
+
+#vendorInvoice .details .tab-content #orderDetails .col-md-12:nth-child(even) {
+    background: #edf8ff;
+
 }
