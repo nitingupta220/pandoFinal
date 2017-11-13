@@ -1982,11 +1982,11 @@ a.modal_link {
     width: 100%;
 }
 
-@media (min-width:1650px) {
-    #vendorInvoice .details .table-fixed tbody {
-        height: 764px;
-    }
+#vendorInvoice .details .header .nav-pills > li + li {
+    margin-left: 0;
 }
+
+
 
 #vendorInvoice .details #fixedTable thead,
 tbody,
@@ -2001,9 +2001,17 @@ th {
     font-size: 14px;
 }
 
+#vendorInvoice .details .table-fixed tbody tr:nth-child(even) td {
+    border-bottom: 1px solid #6b6b6b;
+}
+#vendorInvoice .details .table-fixed tbody tr:nth-child(odd) td:nth-of-type(1) {
+    border-bottom: 1px solid #6b6b6b;
+}
 #vendorInvoice .details .table-fixed thead tr th {
     float: left;
     font-size: 12px;
+    border-top: 1px solid #6b6b6b;
+    border-bottom: 1px solid #6b6b6b;
 }
 
 #vendorInvoice .details .tab-content .bottom {
@@ -2014,6 +2022,613 @@ th {
     text-align: left;
     color: #333333;
     padding: 0;
+    padding-left: 3em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+@media (max-width:1366px) {
+
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(1) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(2) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(3) {
+        width: 13.8%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(4) {
+        width: 13.8%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(5) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(6) {
+        width: 10.9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(7) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(8) {
+        width: 10%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(9) {
+        width: 9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(10) {
+        width: 8.4%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
+        width: 12.1%;
+        height: 76px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(2) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(3) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(4) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(5) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(6) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(8) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(10) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(11) {
+        width: 10.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(12) {
+        width: 9.15%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(13) {
+        width: 7.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(1) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(2) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(3) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(4) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(5) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(6) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(9) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
+        width: 10.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(11) {
+        width: 9.05%;
+        padding: 8px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(12) {
+        width: 7.2%;
+        padding: 8px;
+    }
+}
+
+@media (max-width:1400px) {
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(1) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(2) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(3) {
+        width: 13.8%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(4) {
+        width: 13.8%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(5) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(6) {
+        width: 10.9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(7) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(8) {
+        width: 10%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(9) {
+        width: 9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(10) {
+        width: 8.5%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
+        width: 12.1%;
+        height: 76px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(2) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(3) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(4) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(5) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(6) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(8) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(10) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(11) {
+        width: 10.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(12) {
+        width: 9.15%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(13) {
+        width: 7.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(1) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(2) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(3) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(4) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(5) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(6) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(9) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
+        width: 10.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(11) {
+        width: 9.05%;
+        padding: 8px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(12) {
+        width: 7.2%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 1280px) {
+    #vendorInvoice .details .table-fixed tbody {
+        height: 500px;
+    }
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(1) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(2) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(3) {
+        width: 13.8%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(4) {
+        width: 13.8%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(5) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(6) {
+        width: 10.9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(7) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(8) {
+        width: 10%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(9) {
+        width: 9%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(10) {
+        width: 8.4%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
+        width: 12.1%;
+        height: 76px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(2) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(3) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(4) {
+        width: 7.95%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(5) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(6) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
+        width: 5.32%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(8) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(10) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(11) {
+        width: 10.15%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(12) {
+        width: 9.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(13) {
+        width: 7.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(1) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(2) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(3) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(4) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(5) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(6) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(9) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
+        width: 10.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(11) {
+        width: 9.1%;
+        padding: 8px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(12) {
+        width: 7.2%;
+        padding: 8px;
+    }
+}
+
+@media (min-width:1650px) {
+    #vendorInvoice .details .tab-content tbody {
+        height: 700px;
+    }
+}
+
+@media (min-width:1650px) {
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(1) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(2) {
+        width: 12%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(3) {
+        width: 13.8%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(4) {
+        width: 13.8%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(5) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(6) {
+        width: 10.9%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(7) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(8) {
+        width: 10%;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(9) {
+        width: 9%;
+        height: 59px;
+        padding-top: 11px;
+    }
+
+    #vendorInvoice .details .tab-content thead tr th:nth-of-type(10) {
+        width: 8.4%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
+        width: 12.1%;
+        height: 76px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(2) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(3) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(4) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(5) {
+        width: 5.9%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(6) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(8) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(10) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(11) {
+        width: 10.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(12) {
+        width: 9.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(13) {
+        width: 7.6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(1) {
+        width: 7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(2) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(3) {
+        width: 8%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(4) {
+        width: 6%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(5) {
+        width: 8.7%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(6) {
+        width: 5.2%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
+        width: 5%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
+        width: 11%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(9) {
+        width: 5.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
+        width: 10.1%;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(11) {
+        width: 9%;
+        padding: 8px;
+    }
+
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(12) {
+        width: 7.6%;
+        padding: 8px;
+    }
 }
 
 #vendorInvoice .details .tab-content .bottom span {
@@ -2047,11 +2662,14 @@ th {
     overflow-y: scroll;
     height: 500px;
 }
+
+
 @media (min-width:1650px) {
     #vendorInvoice .details .tab-content #details {
         height: 900px;
     }
 }
+
 #vendorInvoice .details .tab-content #details .orderBody {
     padding-top: 2em;
 }
