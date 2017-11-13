@@ -2223,7 +2223,7 @@ th {
 
 @media (min-width:1680px) {
     #vendorInvoice .details .tab-content tbody {
-        height: 700px;
+        height: 900px;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
         width: 12.15%;
@@ -2250,10 +2250,10 @@ th {
         width: 5.3%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
-        width: 5.05%;
+        width: 5%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
-        width: 10.95%;
+        width: 11%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
         width: 10.15%;
@@ -2300,7 +2300,7 @@ th {
         height: 750px;
     }
 }
-@media (min-width:1650px) {
+@media (min-width:1680px) {
     #vendorInvoice .details .tab-content #details {
         height: 900px;
     }
