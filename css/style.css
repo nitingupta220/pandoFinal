@@ -2226,37 +2226,52 @@ th {
         height: 900px;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(1) {
-        width: 12.15%;
+        width: 12%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(3) {
-        width: 5.05%;
+        width: 5%
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(5) {
-        width: 5.95%;
+        width: 5.8%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(8) {
-        width: 5.05%;
+        width: 5%;
     }
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
+        width: 5.1%;
+    } 
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
-        width: 11%;
+        width: 10.9%;
+    }
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(11) {
+        width: 10%;
+    }
+    #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(12) {
+        width: 9%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(2) {
-        width: 5.08%;
+        width: 5%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(4) {
-        width: 5.9%;
+        width: 5.8%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(6) {
-        width: 5.3%;
+        width: 5.1%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(7) {
         width: 5%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(8) {
-        width: 11%;
+        width: 10.9%;
+    }
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(9) {
+        width: 5%;
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(10) {
-        width: 10.15%;
+        width: 10%;
+    }
+    #vendorInvoice .details .tab-content tbody tr:nth-child(even) td:nth-of-type(11) {
+        width: 9%;
     }
 }
 
