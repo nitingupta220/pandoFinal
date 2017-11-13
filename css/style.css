@@ -2221,7 +2221,7 @@ th {
     }
 }
 
-@media (min-width:1650px) {
+@media (min-width:1680px) {
     #vendorInvoice .details .tab-content tbody {
         height: 700px;
     }
