@@ -1988,13 +1988,6 @@ a.modal_link {
 
 
 
-#vendorInvoice .details #fixedTable thead,
-tbody,
-tr,
-td,
-th {
-    display: block;
-}
 
 #vendorInvoice .details .table-fixed tbody td {
     float: left;
@@ -2239,7 +2232,7 @@ th {
     }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(7) {
         width: 5.1%;
-    } 
+    }
     #vendorInvoice .details .tab-content tbody tr:nth-child(odd) td:nth-of-type(9) {
         width: 10.9%;
     }
@@ -2310,6 +2303,7 @@ th {
     height: 500px;
     width: 105%;
 }
+
 @media (min-width:1440px) {
     #vendorInvoice .details .tab-content tbody {
         height: 600px;
@@ -2318,6 +2312,7 @@ th {
         height: 750px;
     }
 }
+
 @media (min-width:1680px) {
     #vendorInvoice .details .tab-content #details {
         height: 900px;
@@ -2367,4 +2362,209 @@ th {
 #vendorInvoice .details .tab-content #orderDetails .col-md-12:nth-child(even) {
     background: #edf8ff;
 
+}
+
+#billing .header {
+    padding-top: 20px;
+    position: fixed;
+    left: 6em;
+}
+
+#billing .header input[type=text] {
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+    outline-color: white;
+    width: 200px;
+    background-image: url(/images/search.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    padding: 5px;
+    background-position: left;
+    background-position: left;
+    background-size: 14px;
+}
+
+#billing .header input[type=text]:focus {
+    background-image: none;
+}
+
+#billing .header select {
+    width: -webkit-fill-available;
+    height: 32px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border: solid 1px #dddcdc;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: #606060;
+    outline-color: white;
+    padding: 5px;
+}
+
+#billing .billingBody {
+    position: relative;
+    top: 6em;
+    left: -2.8em;
+}
+
+#billing .billingBody .table-fixed {
+    width: 100%;
+
+}
+
+#billing .billingBody tbody {
+    height: 480px;
+    overflow-y: auto;
+    width: 100%;
+}
+@media (min-width:1440px) {
+    #billing .billingBody tbody {
+        height: 730px;
+    }
+}
+@media (min-width:1680px) {
+    #billing .billingBody tbody {
+        height: 900px;
+    }
+}
+
+#billing .billingBody thead,
+tbody,
+tr,
+td,
+th {
+    display: block;
+}
+
+#billing .billingBody td {
+    float: left;
+    font-size: 13px;
+    line-height: 3.34;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #333333;
+    height: 40px;
+    background-color: #fbfbfb;
+    box-shadow: 0 2px 0 0 rgba(215, 215, 215, 0.5);
+    padding: 0px 5px 5px 5px;
+    margin-top: 10px;
+}
+
+#billing .billingBody th {
+    float: left;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    color: #4d443f;
+    height: 32px;
+    border-bottom: solid 1px #6b6b6b;
+    border-top: solid 1px #6b6b6b;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    padding: 5px;
+
+}
+
+#billing .billingBody .table tbody td {
+    border: 1px solid #eeebeb;
+}
+
+#billing .billingBody .table ::-webkit-scrollbar {
+    width: 0px;
+
+}
+
+#billing .billingBody .table ::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+#billing .billingBody .table ::-webkit-scrollbar-thumb {
+    background-color: #fdfdfd;
+}
+
+#billing .billingBody .table ::-webkit-scrollbar-button {
+    background-color: white;
+}
+
+#billing .billingBody .table ::-webkit-scrollbar-corner {
+    background-color: white;
+}
+
+#billing .footer {
+    height: 50px;
+    background-color: #ffffff;
+    box-shadow: -1px -1px 4px 0 rgba(195, 195, 195, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+    padding: 0.5em 7em 2em 0;
+}
+
+#billing .footer button {
+    float: right;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #34b015;
+    border: solid 1px #888888;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+}
+
+#billing .billingBody .table-fixed thead tr th:nth-of-type(1) {
+    width: 12%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(2) {
+    width: 10%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(3) {
+    width: 17%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(4) {
+    width: 19%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(5) {
+    width: 13%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(6) {
+    width: 13%;
+} 
+#billing .billingBody .table-fixed thead tr th:nth-of-type(7) {
+    width: 8%;
+}
+#billing .billingBody .table-fixed thead tr th:nth-of-type(8) {
+    width: 8%;
+    text-align: right;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(1) {
+    width: 12%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(2) {
+    width: 10%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(3) {
+    width: 17%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(4) {
+    width: 19%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(5) {
+    width: 13%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(6) {
+    width: 13%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(7) {
+    width: 8%;
+}
+#billing .billingBody .table-fixed tbody tr td:nth-of-type(8) {
+    width: 8%;
+    text-align: right;
+}
+#billing .billingBody .table td span {
+    float: right;
+    letter-spacing: 4px;
 }
