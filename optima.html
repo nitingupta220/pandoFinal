@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <title>Optima Main Screen</title>
+</head>
+
+<body id="optima">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 tab">
+                <div class="container img">
+                    <img src="images/Pandologo.svg" height="40" width="100" alt="">
+                </div>
+                <div class="container">
+                    <div class="col-md-12">
+                        <p>Super Admin</p>
+                        <p>Nitin Gupta</p>
+                        <span>
+                            <a href="#"> 
+                                <img src="images/right-arrow.svg" height="15" width="15" alt="">
+                            </a>
+                        </span>
+
+                    </div>
+                    <div class="left">
+                        <ul class="nav nav-pills nav-stacked" id="nav">
+                            <li class="active">
+                                <a data-toggle="pill" href="#home">
+                                    <img src="images/optimization.svg" height="19" width="19" alt="">
+                                        Optimize
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu1">
+                                    <img src="images/delivery-package.svg" height="19" width="19" alt="">Orders   
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-10" style="height: 100vh;">
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="col" ng-hide="showDiv">
+                            <div class="container">
+                                <div class="col-md-12 heading">
+                                    <div class="col-md-3" style="padding-left: 0;">
+                                        <p>Uploaded excel files</p>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-3">
+                                        <img src="images/download.svg" height="15" width="15" alt="">
+                                        <span>Download sample files</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="container list">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">
+                                            <p class="upload-path">Material 1</p>
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-3 error">Error msg</div>
+                                        <div class="col-md-1" data-toggle="modal" data-target="#material">
+                                            <img src="images/view.svg" alt="">
+                                        </div>
+                                        <div class="col-md-1">
+                                            <img src="images/trash.svg" alt="">
+                                        </div>
+                                        <div class="modal fade" id="material" role="dialog">
+                                            <div class="modal-dialog">
+
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+
+                                                        <h4 class="modal-title">Material details not found in Pando Master</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container heading">
+                                                            <div class="col-md-1">
+                                                                Materal Code
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                Quantity
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                Gross Weight
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                WUn
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                Volume
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                VUn
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                Shpt
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                Ship to
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="container body">
+                                                            <div class="col-md-1">
+                                                                1234567890
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                2
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                20
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                KG
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                2.63
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                CFT
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                12345678
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                123456
+                                                            </div>
+                                                        </div>
+                                                        <div class="container body">
+                                                            <div class="col-md-1">
+                                                                1234567890
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                2
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                20
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                KG
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                2.63
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                CFT
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                12345678
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                123456
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-footer center-block">
+                                                        <button type="button" class="btn btn-default">Download an excel sheet</button>
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                </div>
+                                <div class="container text-center upload">
+                                    <a href="#" class="btn btn-success OpenImgUpload">Upload an excel file</a>
+                                    <input type="file" class="center-block" id="imgupload" style="visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="container">
+
+                                <div class="col-md-12 head">
+                                    <h2>Select Metrics</h2>
+                                </div>
+                                <hr>
+
+                                <div class="container select">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <label class="radio-inline">
+                                  <input type="radio" name="optradio"><p>Minimise cost </p>
+                                </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="radio-inline">
+                                  <input type="radio" name="optradio"><p>Minimise number of trucks used</p>
+                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <label class="radio-inline">
+                                  <input type="radio" name="optradio"><p>Maximise utilisation</p>
+                                </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="radio-inline">
+                                  <input type="radio" name="optradio"><p>Minimise transit time</p>
+                                </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container text-center optimise">
+                                    <div class="row">
+                                        <a href="#" class="btn btn-success" ng-click="showDiv=true">Optimise</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="container">
+                            <div class="container second-pane">
+                                <img src="images/search.svg" height="25" width="25" alt="">
+                                <input type="text" placeholder="Search here">
+                            </div>
+                            <div class="container ul">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="active">
+                                        <a data-toggle="pill" href="#card">
+                                            <div class="container">
+                                                <div class="col-md-6">
+                                                    <span>Consignee</span>
+                                                    <p>Vijay Enterprises</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span>Vendor</span>
+                                                    <p>Manohar Works</p>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="col-md-6">
+                                                    <span>Truck Type</span>
+                                                    <p>FTL 32FT</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span>Freight Value</span>
+                                                    <p>INR 23,000</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="pill" href="#card1">
+                                            <div class="container">
+                                                <div class="col-md-6">
+                                                    <span>Consignee</span>
+                                                    <p>Vijay Enterprises</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span>Vendor</span>
+                                                    <p>Manohar Works</p>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="col-md-6">
+                                                    <span>Truck Type</span>
+                                                    <p>FTL 32FT</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span>Freight Value</span>
+                                                    <p>INR 23,000</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="card" class="tab-pane fade in active" style="height: 100vh;border: none;">
+                                <div class="container third-pane">
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left: 4%;margin-bottom: -3%;">
+                                            <p>Order Details</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row number">
+                                        <div class="col-md-12">
+                                            <div class="col-md-2">
+                                                <p>Number of Materials</p>
+                                                <span>244</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Number of Consignees</p>
+                                                <span>244</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Utilization</p>
+                                                <span>244</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Total Weight</p>
+                                                <span>244</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Total Volume</p>
+                                                <span>244</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row details">
+                                        <div class="col-md-12" style="padding-left: 4%;">
+                                            <h3>Material Details</h3>
+                                        </div>
+                                        <hr style="margin-left: 2%;">
+                                        <div class="col-md-12 text-center">
+                                            <div class="col-md-2">
+                                                <p>Material Code</p>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Delivery</p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Quantity</p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Weight<br>(KG) </p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Volume<br>(CFT) </p>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Shpt</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Ship to</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container card">
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse1" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="container footer text-center">
+                                    <div class="col-md-12">
+                                        <a href="#" class="btn btn-success foot">Indent Order</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="card1" class="tab-pane fade">
+                                <div class="container third-pane">
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left: 4%;margin-bottom: -3%;">
+                                            <p>Order Details</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row number">
+                                        <div class="col-md-12">
+                                            <div class="col-md-2">
+                                                <p>Number of Materials</p>
+                                                <span>20</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Number of Consignees</p>
+                                                <span>20</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Utilization</p>
+                                                <span>20</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Total Weight</p>
+                                                <span>20</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Total Volume</p>
+                                                <span>20</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row details">
+                                        <div class="col-md-12" style="padding-left: 4%;">
+                                            <h3>Material Details</h3>
+                                        </div>
+                                        <hr style="margin-left: 2%;">
+                                        <div class="col-md-12 text-center">
+                                            <div class="col-md-2">
+                                                <p>Material Code</p>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Delivery</p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Quantity</p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Weight<br>(KG) </p>
+
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Volume<br>(CFT) </p>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p>Shpt</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <p>Ship to</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container card">
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse1" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a>Abhijeet Works, Bangalore</a>
+                                                        <a data-toggle="collapse" href="#collapse2" style="float: right;color: black;"><img src="images/down-arrow.svg" height="19" width="19" alt=""></a>
+                                                        <a href="#" style="float: right;margin-right: 6%;">Delete</a>
+                                                    </h4>
+
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>20</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>2.63</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <p>12345678901234</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>123456</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <img src="images/trash.svg" height="15" width="15" alt="" style="vertical-align: text-top;">
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
