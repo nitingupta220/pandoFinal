@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>Billing</title>
-    <!-- Required meta tags -->
+    <title>Ready for Billing</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-       
+
+
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
 
 </head>
 
@@ -107,7 +108,7 @@
                                             <td>10 Oct 2017</td>
                                             <td>Chennai - Chennai</td>
                                             <td>Orient Electricals <span>+5</span></td>
-                                            <td>789606 <span><a href="#" class="tooltip" data-toggle="tooltip" data-placement="top" title="Hooray!"></a>+ 3</span></td>
+                                            <td>789606 <span data-toggle="tooltip" data-placement="bottom" title="Hooray!">+ 3</span></td>
                                             <td>TN 12 90 4567</td>
                                             <td>500 CFT</td>
                                             <td>20,200</td>
@@ -289,7 +290,7 @@
             </div>
         </div>
     </div>
- 
+
 </body>
 
 </html>
