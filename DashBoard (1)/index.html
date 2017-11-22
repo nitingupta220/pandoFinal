@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <title>Pando Login</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-lg-2">
+
+            </div>
+            <div class="col-md-10 col-sm-10 col-lg-10">
+                <div class="container filters">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 col-lg-2">
+                            <select name="" id="">
+                                <option value="North">North</option>
+                                <option value="South">South</option>
+                                <option value="East">East</option>
+                                <option value="West">West</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-lg-2">
+                            <select name="" id="">
+                                <option value="logorg">LogOrg</option>
+                                <option value="super admin">Super Admin</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-lg-2">
+                            <select name="" id="">
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                                <option value="January">January</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-lg-6 text-right">
+                            <a href="#">
+                                <button class="btn btn-success">Download</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container chartContainer">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left: 0;">
+                            <div class="col-sm-12 col-md-6 col-lg-6 charts">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <p>Transit Delay</p>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 text-right label">
+                                    <div class="col-sm-4 col-md-4 col-lg-4"></div>
+                                    <div class="col-sm-4 col-md-4 col-lg-2">On time</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">1 Day</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">2 Days</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">2 Days</div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 chart" ng-controller="BarCtrl">
+                                    <canvas id="base" class="chart-horizontal-bar" chart-data="data" chart-labels="labels" chart-colors="colours"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6 charts">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <p>Detention Delay</p>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 text-right label">
+                                    <div class="col-sm-4 col-md-4 col-lg-4"></div>
+                                    <div class="col-sm-4 col-md-4 col-lg-2">On time</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">1 Day</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">2 Days</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">2 Days</div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 chart" ng-controller="LineCtrl">
+                                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+                                    </canvas>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 " style="padding-left: 0;margin-top: 2%;">
+                                <div class="col-sm-9 col-md-9 col-lg-9 longCharts" style="padding-left: 0;padding-right: 0;margin: 0px;">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <p>Transit Delay</p>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 text-right label">
+                                        <div class="col-sm-8 col-md-8 col-lg-8"></div>
+                                        <div class="col-sm-4 col-md-4 col-lg-2">Weight</div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2">Volume</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 chart" ng-controller="doubleBarCtrl">
+                                        <canvas id="doublebase" class="chart-horizontal-bar" chart-data="data" chart-labels="labels">
+                                        </canvas>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 doubleChart">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                            1,20,495
+                                            <p>Movement Volume (CFT)</p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 chart" ng-controller="smallBarCtrl">
+                                            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels"> chart-series="series"
+                                            </canvas>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                            10,899
+                                            <p>Movement Weight (tons)</p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 chart" ng-controller="smallBarCtrl">
+                                            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels"> chart-series="series"
+                                            </canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+</body>
+
+</html>
