@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4bd930b540.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Orders</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="orders">
+        <div class="row">
+            <div class="navbar col-sm-2 col-md-2 col-lg-2 col-2">
+                <div class="header text-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/philips.png" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+                <div class="navs">
+                    <div class="user-details">
+                        <a href="#">
+                            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                        </a>
+                        <span>LogOrg Manager</span>
+                        <p>Mr. Gurgaon LogOrg</p>
+                    </div>
+                    <div class="nav">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/dashboard_white.svg" alt="">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/profit-report.svg" alt="">Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/outbound_white.svg" alt="">Outbound Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/inbound_white.svg" alt="">Inboud Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/delivered_order.svg" alt="">Delivered Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/icon-bulk-upld.png" alt="">Bulk Upload</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="images/icon-logout.png" alt="">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="filters col-sm-3 col-md-3 col-lg-3 col-3">
+                <div class="header text-center">
+                    <img src="images/search.svg" height="20" width="20" alt="">
+                    <input type="text" placeholder="Search all Orders">
+                    <div class="dropdown">
+                        <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CREATE A NEW ORDER
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Single Consignment</a>
+                            <a class="dropdown-item" href="#">Multi Consignments</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Export
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container back">
+                    <a href="#">
+                        <span><i class="fa fa-angle-left fa-2x"></i></span>Back
+                    </a>
+                </div>
+                <div class="orders container">
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                All orders <span class="badge pull-right">1234</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Intended orders <span class="badge pull-right">50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Assigned orders <span class="badge pull-right">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Arrived orders <span class="badge pull-right ">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Dispatched orders <span class="badge pull-right ">500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container orderlist">
+                        <div class="row">
+                            <div class="col-12 listing">
+                                Cancelled orders <span class="badge pull-right">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 col-lg-7 col-7 view">
+                <div class="container heading">
+                    <div class="row">
+                        <div class="col-12">
+                            ORDER DETAILS
+                        </div>
+                    </div>
+                </div>
+                <div class="container singleOrder">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9 col-sm-9 col-md-9 col-lg-9 details">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Gate</span>
+                                            <p>Gate 1</p>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>LogOrg</span>
+                                            <p>Philips Lighting INDIA LIMITED - Mumbai</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Delivery to </span>
+                                            <p>Vipul Agencies</p>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Transport Vendor</span>
+                                            <p>Shivkrupa Transport</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Order ID</span>
+                                            <p>PND-ORD-3193</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Created</span>
+                                            <p>27-Oct-17 01:35pm</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Order Type</span>
+                                            <p>Contract</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Delivery Type</span>
+                                            <p>FTL</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Vehicle Type</span>
+                                            <p>FTL/300 CFT/3000 KG</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                            <span>Contracted Price</span>
+                                            <p>2958 Per Trip</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding: 1em 2em 0 2em;border: none;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <div class="row accordion">
+                                        <div class="col-sm-3 col-md-3 col-lg-3 col-3">
+                                            <span>LR NUMBER</span>
+                                            <p>123456</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-4 col-4">
+                                            <span>Consignee Name</span>
+                                            <p>MJ Corporation</p>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 col-lg-3 col-3">
+                                            <span>Expected Date</span>
+                                            <p>10/28/2017</p>
+                                        </div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-2">
+                                            <span>Status</span>
+                                            <p>Intended</p>
+                                        </div>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <span>Unloading Point</span>
+                                                    <p> Plot 117 Near Apmc Market,Navi Mumbai, Pin: 400705, Maharashtra, Navi Mumbai, Maharashtra - 400705, India</p>
+                                                    <span>Unloaders</span>
+                                                    <p>Unavailable</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-3 materialDetail">
+                                <div class="container actionButton">
+
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 material">
+                                        <a href="#"><button class="btn btn-primary" data-toggle="modal" data-target="#flipFlop">Copy from Clipboard</button></a>
+                                        <div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header" style="border: none;">
+                                                        <h4 class="modal-title text-center" id="modalLabel">Copy paste the Materials for Multiple Consignments Sample Format</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: black;font-size: 40px;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                    <button class="btn btn-primary pull-right">Sample Format</button>
+                                                                </div>
+                                                                <div class="form-group">
+
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="100"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer text-left">
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 material">
+                                        <a href="#"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Material Info</button></a>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content" style="width: auto;
+                                                   margin-left: -11em;margin-top: -5em;">
+                                                    <div class="modal-header" style="border: none;">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Materials & Quantity for Shrey Electro Sales Private Ltd.</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true" style="color: black;font-size: 30px;">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="col-12 buttons">
+                                                            <input type="file">
+                                                            <button class="btn btn-primary">Upload</button>
+                                                            <button class="btn btn-primary pull-right">Download Sample Format</button>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="col-12">Materials List:</div>
+                                                        <div class="table container">
+                                                            <table class="table table-responsive">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Select</th>
+                                                                        <th>Material Code</th>
+                                                                        <th>Material Name</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>BUn</th>
+                                                                        <th>Gross Weight</th>
+                                                                        <th>WUn</th>
+                                                                        <th>Volume</th>
+                                                                        <th>VUn</th>
+                                                                        <th>Delivery</th>
+                                                                        <th>Bill number</th>
+                                                                        <th>Shpt</th>
+                                                                        <th>Ship_to</th>
+                                                                        <th>Sold_to_pt</th>
+                                                                        <th>Sorg</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <td><input type="checkbox"></td>
+                                                                    <td>824110150351</td>
+                                                                    <td></td>
+                                                                    <td>2</td>
+                                                                    <td>9520</td>
+                                                                    <td>9.4</td>
+                                                                    <td>KG</td>
+                                                                    <td>102.48</td>
+                                                                    <td>CDM</td>
+                                                                    <td>2030224152</td>
+                                                                    <td>62563631</td>
+                                                                    <td>INNH</td>
+                                                                    <td>91022343</td>
+                                                                    <td>91022343</td>
+                                                                    <td>IN01</td>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 loading">
+                                        <span>Loading Point</span>
+                                        <p>1C, Building Number B-2, Vahuli Village, Jaibhagwan Realities post padga, Post Padgha, Tal Bhiwandi ,Mumbai, Maharashtra ,Pincode:421101</p>
+                                        <span>Loading Date</span>
+                                        <p>10/29/2017</p>
+                                        <span>Loaders Avaialble</span>
+                                        <p>Yes <br>Don't add to Invoice</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 loading">
+                                        <span>Other Information: <span><a href="#" style="font-size: 1.2em;">Edit</a></span></span>
+                                        <p>GGN/28102017/ND/000014 Freight Workings
+                                        </p>
+                                        <a href="#">
+                                            <button class="btn btn-default edit">Freight Workings</button>
+                                        </a>
+                                        <a href="#">
+                                            <button class="btn btn-success edit">Truck In</button>
+                                        </a>
+                                        <a href="#">
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#cancel">
+                                            Cancel Order
+                                        </button>
+                                         <div class="modal fade" id="cancel" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="margin-top: -5em;margin-left: 13em;">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content" style="width: 70%;">
+                                                    <div class="modal-header" style="border: none;">
+                                                        <h4 class="modal-title text-center" id="modalLabel">Are you sure you want to cancel your Order.
+                                                        </h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: black;font-size: 40px;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="col-12">
+                                                           <label style="color: black;font-size: 0.9em;">Cancellation charges : Rs.</label>
+                                                           <br>
+                                                          <input type="text" class="form-control" value="0" disabled>
+                                                        </div>
+                                                        <div class="col-12">
+                                                          <input type="checkbox" style="margin: 1em 2em 0 1em;"><label style="color: black;font-size: 0.9em;">Generate Bill</label>
+                                                        </div>   
+                                                        <div class="col-12 text-center">
+                                                            <button class="btn btn-primary">Yes</button>
+                                                            <button class="btn btn-primary">No</button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
